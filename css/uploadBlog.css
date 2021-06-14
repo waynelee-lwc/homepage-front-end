@@ -1,0 +1,73 @@
+.uploadBlog{
+	
+}
+
+.uploadBlog-blog{
+	width:80%;
+	height:800px;
+	/* border: 1px solid; */
+	margin: auto;
+	margin-top: 20px;
+}
+
+.uploadBlog-blog-column{
+	margin-bottom: 10px;
+	height:80px;
+	widht:90%;
+	margin: auto;
+}
+.uploadBlog-blog-column input{
+	height:20px;
+	width:20px;
+}
+
+.uploadBlog-blog-info{
+    width: 90%;
+    height: 80px;
+    /* border: 1px solid; */
+    margin: auto;
+}
+
+.uploadBlog-blog-title{
+    height: 80px;
+    width: 90%;
+    /* border: 1px solid; */
+    margin: auto;
+}
+.uploadBlog-blog-title input[type=text]{
+	width: 1200px;
+	height:40px;
+	font-size: 20px;
+}
+
+.uploadBlog-blog-text{
+    height: 600px;
+    width: 95%;
+    /* border: 1px solid; */
+    margin: auto;
+}
+.uploadBlog-blog-text textarea{
+	height:500px;
+	width:1400px;
+	margin: auto;
+	display: block;
+	font-size: 20px;
+	padding: 0.625rem;
+	box-sizing: border-box;
+}
+
+.uploadBlog-blog-text button{
+	margin: auto;
+	display: block;
+	margin-top: 30px;
+	height:40px;
+	width:200px;
+	font-size: 18px;
+}
+input[type=text],
+input[type=number],
+select{
+	height:30px;
+	width: 200px;
+	font-size: 18px;
+}

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>资源墙</title>
+		<link rel="stylesheet" href="css/common.css" />
+		<link rel="stylesheet" href="css/nav.css" />
+		<link rel="stylesheet" href="css/resource.css">
+		<link rel="shortcut icon" href="./ico/icon.png" type="image/x-icon">
+	</head>
+	<body>
+		<div class="rsboard clear">
+			<!-- 导航栏 -->
+			<div class="general-nav">
+				<div class="general-nav-content">
+					<div class="general-nav-content-bloger">
+						<ul>
+							<li><a href="index.html"><!-- <img src="img/icon.jpg"/> --></a></li>
+							<li><a href="index.html"><p>卷卷毛's 主页</p></a></li>
+						</ul>
+					</div>
+					<div class="general-nav-content-links">
+						<ul>
+							<li><a href="blog.html">博客园</a></li>
+							<li><a href="./friends.html">友人录</a></li>
+							<li class="general-nav-content-links-selected" href="./resource.html"><a>资源墙</a></li>
+							<li><a href="./note.html">留言板</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			
+			<!-- 标签 -->
+			<div class="rsboard-upload">
+				<h3>资源分类</h3>
+				<ul class="clear">
+					<li v-for="(cls,idx) in colList" @click="shiftCol(cls)" :class="{'colSelected':cls == colselected}">
+						<p>{{cls}}</p>
+					</li>
+				</ul>
+			</div>
+			
+			<!-- 展示 -->
+			<div class="rsboard-display">
+				<!-- <h2>资源链接</h2> -->
+				
+				<div v-for="(col,index) in linkList" class="rsboard-display-collection clear">
+					<p class="rsboard-display-collection-title">
+						{{col.name}}
+					</p>
+					<a 
+					class="rsboard-display-collection-link" 
+					v-for="(link,idx) in col.links"
+					:href="link.address"
+					target="_blank">
+						<!-- {{link}} -->
+						<div class="rsboard-display-collection-link-icon">
+							<img :src="link.icon == null ? link.address + '/favicon.ico' : link.icon " alt=""/>
+						</div>
+						<div class="rsboard-display-collection-link-title">
+							<h3>{{link.name}}</h3>
+						</div>
+						<div class="rsboard-display-collection-link-intro">
+							<p>{{link.intro}}</p>
+						</div>
+					</a>
+				</div>
+			</div>
+			
+			<!-- 上传 -->
+<!-- 			<div class="rsboard-retrieval">
+				
+			</div> -->
+			<footer class="footer">
+				<div class="container">
+					<p>©版权所有：Designed by 卷卷毛</p>
+					<a href="http://beian.miit.gov.cn" target="_blank"><p>豫ICP备2021010363号</p></a>
+				</div>
+			</footer>
+		</div>
+	</body>
+</html>
+<script src="js/vue.js"></script>
+<script src="js/jquery-3.5.1.js"></script>
+<script src="js/commen.js"></script>
+<script src="js/resource.js"></script>

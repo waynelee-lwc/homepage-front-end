@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>友人录</title>
+		<link rel="stylesheet" href="css/common.css" />
+		<link rel="stylesheet" href="css/friends.css"/>
+		<link rel="stylesheet" href="css/nav.css"/>
+		<link rel="shortcut icon" href="./ico/icon.png" type="image/x-icon">
+	</head>
+	<body>
+		<div id="friends" class="friends">
+			<!-- 导航栏 -->
+			<div class="general-nav">
+				<div class="general-nav-content">
+					<div class="general-nav-content-bloger">
+						<ul>
+							<li><a href="index.html"><!-- <img src="img/icon.jpg"/> --></a></li>
+							<li><a href="index.html"><p>卷卷毛's 主页</p></a></li>
+						</ul>
+					</div>
+					<div class="general-nav-content-links">
+						<ul>
+							<li><a href="blog.html">博客园</a></li>
+							<li class="general-nav-content-links-selected"><a href="./friends.html">友人录</a></li>
+							<li><a href="resource.html">资源墙</a></li>
+							<li><a href="./note.html">留言板</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			
+			<!-- 友链墙 -->
+			<div class="friedns-content">
+				<!-- 友链墙导语 -->
+				<div class="friends-slogan">
+					<span>“</span>
+					<p>
+						朋友，学习累了，歇歇脚，让压力藏的藏跑的跑
+					</p>
+					<p>
+						朋友，工作烦了，微微笑，让烦恼躲的躲逃的逃
+					</p>
+					<span>”</span>
+				</div>
+				
+				<div class="friends-content-links">
+					<h3>友情链接</h3>
+					<ul>
+						<li class="friends-content-links-node" v-for="(link,idx) in friendLink">
+							<a :href="link.address" target="_blank">
+								<img :src="link.icon" />
+								<p>{{link.name}}</p>
+								<p>{{link.intro}}</p>
+							</a>
+						</li>
+					</ul>
+				</div>
+				
+				<div class="friends-leave"> 
+<!-- 					<div class="friends-leave-slogan">
+						<span style="">“</span>
+							<p>
+								所以说，缘聚缘散缘如水，留下友链好相会
+							</p>
+						<span style="text-align: right;">”</span>
+					</div> -->
+					
+					<div class="friends-leave-info">
+						<p>交换友链可以在留言板留言，也可以发送邮件到博主邮箱</p>
+
+						<ul>
+							<li>名称：卷卷毛的主页</li>
+							<li>网址：http://www.wayne-lee.top:2048</li>
+							<li>图标：http://www.wayne-lee.top:2048/ico/icon.png</li>
+							<li>描述：一个恰好爱撸铁的程序猿</li>
+							<li>邮箱：1418551940@qq.com</li>
+						</ul>
+						<p>发送友链时请确保友链可以访问</p>
+						<p>网址和名称为必填项，图标和描述可以选填。</p>
+						<p>来自CSDN等博客网站的小伙伴也可以留下友链哟。有条件的小伙伴记得也将本站加入友链</p>
+					</div>
+					
+					
+					<!-- <div class="friends-leave-form">
+						<div class="friends-leave-form-address">
+							<input type="text" placeholder="友链地址" v-model="friendForm.address"/>
+						</div>
+						<div class="friends-leave-form-name">
+							<input type="text" placeholder="友链名称" v-model="friendForm.name"/>
+						</div>
+						<button class="friends-leave-form-submit" @click="addFriendLink()">交个朋友</button>
+					</div> -->
+				</div>
+				<footer class="footer">
+					<div class="container">
+						<p>©版权所有：Designed by 卷卷毛</p>
+						<a href="http://beian.miit.gov.cn" target="_blank"><p>豫ICP备2021010363号</p></a>
+					</div>
+				</footer>
+			</div>
+			
+			<!-- 播放器 -->
+			<div class="friends-player">
+				<audio id="audio1">
+					<source src="audio/rain.mp3"></source>
+				</audio>
+				<audio id="audio2">
+					<source src="audio/rain.mp3"></source>
+				</audio>
+				<div class="friends-player-container" :class="bgm.containerClass">
+					<img src="img/note.png"/>
+					<div class="friends-player-bg"></div>
+					<div class="friends-player-mask" @click="bgmControl">
+						<div class="friends-player-mask-control" :class="bgm.maskControlClass"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>
+<script src="js/vue.js"></script>
+<script src="js/jquery-3.5.1.js"></script>
+<script src="js/commen.js"></script>
+<script src="js/friends.js"></script>

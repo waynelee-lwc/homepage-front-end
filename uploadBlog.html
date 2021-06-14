@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<link rel="stylesheet" href="css/common.css"/>
+		<link rel="stylesheet" href="css/uploadBlog.css" />
+		<link rel="shortcut icon" href="./ico/icon.png" type="image/x-icon">
+	</head>
+	<body>
+		<div class="uploadBlog">
+			<div class="uploadBlog-blog">
+				<div class="uploadBlog-blog-column">
+					<ul>
+						<li style="float: left;margin-left:15px;" v-for="(col,idx) in columnList">
+						<input type="checkbox" v-model="columnSelected" :value="col.id" @change="changeColumn()" />{{col.name}}
+						</li>
+					</ul>
+				</div>
+				<div class="uploadBlog-blog-info">
+					发布时间<input type="text" placeholder="publishTime" v-model="blog.publishTime"/>
+					更新时间<input type="text" placeholder="updateTime" v-model="blog.updateTime"/>
+					评论数<input type="number" placeholder="comments" v-model="blog.comments"/>
+					浏览数<input type="number" placeholder="visits" v-model="blog.visits"/>
+					摘要<input type="text" placeholder="visits" v-model="blog.abst"/>
+				</div>
+				<div class="uploadBlog-blog-title">
+					博客标题<input type="text" v-model="blog.title" placeholder="title"/>
+				</div>
+				<div class="uploadBlog-blog-text">
+					博客正文<textarea v-model="blog.text" placeholder="text"></textarea>
+					<button @click="uploadBlog">提交</button>
+				</div>
+				<div class="uploadBlog-blog-list">
+					<ul>
+						<li v-for="(blog) in blogsExisted">
+							{{blog}}
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>
+<script src="js/vue.js"></script>
+<script src="js/jquery-3.5.1.js"></script>
+<script src="js/uploadBlog.js"></script>
+<script src="js/commen.js"></script>

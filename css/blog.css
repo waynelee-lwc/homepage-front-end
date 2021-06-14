@@ -1,0 +1,749 @@
+/*开始动画*/
+@keyframes open{
+	0%{
+		opacity: 0;
+		transform: scale(0.5);
+		transform:translateY(6.25rem);
+	}
+	100%{
+		opacity: 1;
+		transform: scale(1);
+	}
+}
+@keyframes apperence{
+	from{opacity: 0;}
+	to{opacity: 1;}
+}
+
+/*博客div*/
+.blog{
+	min-height: 150%;
+	width: 100%;
+	background-image: url(../img/bg6.jpg);
+	/* background-repeat: no-repeat; */
+	/* background-size: 100% 100%; */
+	background-size: cover;
+	background-attachment: fixed;
+	box-sizing: border-box;
+	position: relative;
+	padding-bottom: 7rem;
+	/* padding-top: 1.875rem; */
+	
+	/* animation-name: apperence; */
+	/* animation-duration: 1.5s; */
+	
+}
+
+/* 主页链接 */
+.blog-indexlink{
+    /* border: 1px solid; */
+   /* height: 3.125rem;
+    width: 6.5rem; */
+	width: 3.125rem;
+	height: 6.5rem;
+    position: absolute;
+    left: 20rem;
+	top: 0rem;
+    border-bottom-left-radius: 1.5625rem;
+    border-bottom-right-radius: 1.5625rem;
+	background-color: #e3e3e3;
+    z-index: 2;
+	transform: translateY(-3.25rem);
+	
+	transition: all 0.5s;
+}
+
+.blog-indexlink:hover{
+	transform: translateY(0rem);
+}
+
+.blog-indexlink p,
+.blog-indexlink img{
+	display: block;
+	/* float: left; */
+}
+
+.blog-indexlink img{
+	height: 3.25rem;
+	width: 3.25rem;
+	border-radius: 50%;
+}
+
+.blog-indexlink p{
+	line-height: 1.625rem;
+	font-size: 1.5rem;
+	box-sizing: border-box;
+	width:1.5rem;
+	margin: auto;
+	color: #515151;
+}
+
+.blog-indexlink p:hover{
+	color: #8cac7b;
+}
+
+
+/* 博客内容 */
+.blog-preview{
+	/* border: 1px solid white; */
+	/* height: 54.375rem; */
+	height:90%;
+	width: 63.75rem;
+	margin: auto;
+	/* overflow-y: auto; */
+	/* scroll-behavior: unset; */
+	/* padding-top:60px; */
+/* 	border-right: 3px solid #648186;
+	border-left: 3px solid #648186; */
+	margin-top: 2.125rem;
+	box-shadow: 0px 0.3125rem 1.5625rem #648186;
+}
+
+.blog-preview::after{
+	content: "";
+	clear: both;
+	display: block;
+}
+.blog-preview-content{
+	min-height: 95%;
+	width:62.5rem;
+	/* border: 1px solid; */
+	overflow-x: auto;
+	margin:auto;
+	transform: translateY(0.3125rem);
+	/* overflow-y: auto; */
+	margin-bottom: 0.75rem;
+}
+.blog-preview-content::-webkit-scrollbar{
+	display: none;
+}
+
+.blog-preview-total{
+	height:3%;
+	width:95%;
+	/* border: 1px solid; */
+	margin: auto;
+	/* margin-top: 0.625rem; */
+	/* box-shadow: 0px 0.125rem; */
+}
+.blog-preview-total p{
+	vertical-align: middle;
+	text-align: center;
+	font-size: 1.25rem;
+	font-weight: bold;
+	letter-spacing: 0.125rem;
+	
+	/* transition: all 0.2s; */
+}
+
+
+
+/* 博客内容展示模块 */
+.blog-preview-container{
+/* border: 1px solid white; */ 
+    height: 15rem;
+    width: 62.5rem;
+    /* float: left; */
+    margin: auto;
+    margin-top: 0.9375rem;
+    margin-bottom: 1rem;
+    /* cursor: pointer; */
+    background-color: #e3e3e3;
+    border-radius: 0.9375rem;
+	border: 0.375rem double gray;
+	box-sizing: border-box;
+    transition: all 0.4s;
+	
+	/* animation-delay: 10s; */
+	animation-name: blog-load;
+	animation-duration: 1s;
+	animation-timing-function: ease-in;
+	animation-fill-mode: backwards;
+}
+
+@keyframes blog-load{
+	0%{
+		opacity: .0;
+		transform: translateX(110%);
+	}
+	80%{
+		transform: translateX(-2rem);
+	}
+}
+
+.blog-preview-container:hover{
+	background-color: rgb(130 176 202 / 60%);
+	position: relative;
+	border: 0.375rem double #b7e8e8;
+	/* transform: translateY(-10px); */
+	box-shadow: 0px 0px 0.1875rem #3c4f56;
+}
+
+.blog-preview-container-title{
+	height:5rem;
+	width:95%;
+	margin: auto;
+	/* border: 1px solid; */
+	
+}
+.blog-preview-container-title h2{
+	/* border: 1px solid; */
+	font-size: 1.25rem;
+	line-height: 5rem;
+	/* padding-left: 0.2rem; */
+	/* padding-right: 1rem; */
+	text-overflow: ellipsis;
+	cursor: pointer;
+	transition: all 0.1s;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+.blog-preview-container-title h2:hover{
+	color: #8cac7b;
+	text-overflow: unset;
+	overflow: unset;
+}
+
+.blog-preview-container-title::after{
+	content: "";
+	display: block;
+	width:100%;
+	border: 1px solid gray;
+	border-radius: 50%;
+}
+
+.blog-preview-container-text{
+	width: 95%;
+	height:5rem;
+	/* border: 1px solid ; */
+	margin: auto;
+	margin-top: 1.25rem;
+}
+.blog-preview-container-text p{
+	color: gray;
+	font-size: 1rem;
+	
+	/* max-height: 5.125rem; */
+	text-overflow: -o-ellipsis-lastline;
+	text-overflow: ellipsis;
+	overflow: hidden;
+	display: -webkit-box;
+	-webkit-box-orient: vertical;
+    /* 下面的数字表示几行以后显示省略号 */
+	-webkit-line-clamp: 3;
+	line-clamp: 2;
+}
+
+.blog-preview-container-label{
+	/* border: 1px solid; */
+	width:95%;
+	height:2rem;
+	margin: auto;
+	margin-top: 0.625rem;
+}
+.blog-preview-container-label li{
+	float: left;
+	line-height: 2rem;
+	font-size: 1rem;
+	color: gray;
+	margin-right: 1.5rem;
+}
+.blog-preview-container-label li::after{
+	content:"";
+	width:1.2rem;
+	height: 1.2rem;
+	display: block;
+	background-size: cover;
+	float: left;
+	margin-top: 0.3rem;
+	margin-right: 0.2rem;
+}
+.blog-preview-container-label li a{
+	margin-right: 0.3125rem;
+	cursor: pointer;
+}
+.blog-preview-container-label li a:hover{
+	text-decoration: underline;
+	color: #1D5F84;
+}
+
+.blog-preview-container-label li:last-of-type{
+	float: right;
+}
+.blog-preview-container-label li:nth-of-type(1)::after{
+	background-image: url(../img/publish-time.png);
+}
+.blog-preview-container-label li:nth-of-type(2)::after{
+	background-image: url(../img/label.png);
+}
+.blog-preview-container-label li:nth-of-type(3)::after{
+	background-image: url(../img/visits.png);
+}
+.blog-preview-container-label li:nth-of-type(4)::after{
+	background-image: url(../img/comment.png);
+}
+.blog-preview-container-label li:last-of-type::after{
+	background-image: url(../img/share.png);
+}
+
+
+
+
+/* 博客园标题 */
+.blog-title{
+	/* font-size: 3.5rem; */
+	width:18.75rem;
+	height: 9.625rem;
+	position: absolute;
+	left: 2.125rem;
+	top: 3.875rem;
+	background-image: url(../img/blog-title.png);
+	background-size: cover;
+	
+	animation-name: open;
+	animation-duration: 1s;
+}
+
+
+/* 博主信息 */
+.blog-info{
+	position: absolute;
+	/* border: 1px solid black; */
+	/* height: 400px; */
+	/* width: 350px; */
+	height:25rem;
+	width:22.5rem;
+	top: 13.5rem;
+	left: 3.125rem;
+	/* background-color: rgb(253 255 228); */
+	background-color: #e3e3e3;
+	box-shadow: 0.0625rem 0.125rem 0.3125rem #648186;
+	border-radius: 0.625rem;
+}
+.blog-info div{
+	float:left;
+}
+.blog-info-icon{
+	background-image: url(../img/icon.jpg);
+	width:5rem;
+	height: 5rem;
+	border-radius: 50%;
+	background-size: cover;
+	margin-top: 1.875rem;
+	margin-left: 2.5rem;
+	border: 0.125rem solid #1D5F84;
+}
+.blog-info-motto{
+	width: 10rem;
+	height:6.25rem;
+	/* border: 1px solid black; */
+	margin-top: 1.875rem;
+	margin-left: 2.5rem;
+}
+.blog-info-motto li{
+	text-align: center;
+	margin-bottom: 0.625rem;
+	font-size: 1rem;
+	color: gray;
+	cursor: default;
+}
+.blog-info-motto li::after,
+.blog-info-motto li::before
+{
+	content:"";
+	display: block;
+	width:0.3125rem;
+	height:0.3125rem;
+	background-color: #61A9D0;
+	float: left;
+	margin-top: 0.5rem;
+	border-radius: 50%;
+	
+	transition: all 0.2s;
+}
+.blog-info-motto li::before{
+	float: right;
+}
+.blog-info-motto li:hover::after,
+.blog-info-motto li:hover::before{
+	transform: scale(1.5);
+	background-color: #70c4f1;
+	filter: blur(0.0625rem);
+}
+
+.blog-info-name{
+	/* border:1px solid black; */
+	height:5rem;
+	width:12.5rem;
+	margin-left: 5rem;
+	margin-top: 1.25rem;
+}
+.blog-info-name::before{
+	content: "";
+	border: 0.0625rem solid #b0b0b0;
+	display: block;
+	width:18.75rem;
+	transform: translateX(-3.125rem);
+	border-radius: 50%;
+}
+.blog-info-name span{
+	margin-top: 0.3125rem;
+	display: block;
+	text-align: center;
+	font-size: 1.5rem;
+	font-weight: bold;
+	cursor: default;
+}
+.blog-info-school{
+	/* border: 1px solid; */
+    width: 12.5rem;
+    margin-left: 5rem;
+	margin-top: 0.3125rem;
+    text-align: left;
+}
+.blog-info-school span{
+	font-size: 1rem;
+    font-weight: bold;
+    color: #5d5d5d;
+	display: block;
+	margin: auto;
+	width:6.25rem;
+	
+	transition: color 0.2s;
+}
+.blog-info-school span::before{
+	content:"";
+	width:1.25rem;
+	height:1.25rem;
+	background-image: url(../img/school.png);
+	background-size: cover;
+	display: block;
+	float: left;
+	margin-right: 0.1875rem;
+	/* background-color: red; */
+}
+.blog-info-school span:hover{
+	color: #2C6EA7;
+}
+
+.blog-info-count{
+	height:5rem;
+	width:15.625rem;
+	/* border: 1px solid black; */
+	margin-top: 0.5rem;
+	margin-left: 3.125rem;
+	display: flex;
+	justify-content: space-around;
+}
+
+.blog-info-count div{
+	/* border: 1px solid black; */
+/* 	float: right;
+	margin-right: 60px; */
+}
+
+.blog-info-count div p:nth-of-type(1){
+	margin-top: 0.9375rem;
+	font-size: 1.25rem;
+	color: gray;
+	text-align: center;
+}
+
+.blog-info-count div p:nth-of-type(2){
+	margin-top: 0.625rem;
+	font-size: 1.25rem;
+	text-align: center;
+	color: #27ad37;
+}
+
+.blog-info-contact{
+	width:18.75rem;
+	height:4.375rem;
+	/* border: 1px solid black; */
+	margin-left: 1.5625rem;
+	margin-top: 1.25rem;
+}
+.blog-info-contact span{
+	float: left;
+	font-size: 1.125rem;
+	display: inline-block;
+	color: #808080;
+	margin-bottom: 0.3125rem;
+}
+.blog-info-contact ul{
+	float: left;
+	margin-left: 0.625rem;
+}
+.blog-info-contact li{
+	float: left;
+	margin-left: 0.625rem;
+	cursor: pointer;
+	
+	transition: all 0.2s;
+}
+.blog-info-contact img{
+	width: 1.5625rem;
+	height:1.5625rem;
+	/* background-attachment: cover; */
+	display: block;
+	background-repeat: no-repeat;
+	background-position: center; 
+	
+}
+.blog-info-contact li:hover{
+	transform: scale(1.2);
+}
+
+.blog-info-friends{
+	
+}
+/* 友情链接 */
+.blog-friendlink{
+	position: absolute;
+	/* border: 1px solid black; */
+	/* height: 400px; */
+	/* width: 350px; */
+	min-height:18rem;
+	padding-bottom: 1rem;
+	width:22.5rem;
+	top: 39rem;
+	left: 3.125rem;
+	/* background-color: rgb(253 255 228); */
+	background-color: #e3e3e3;
+	box-shadow: 0.0625rem 0.125rem 0.3125rem #648186;
+	border-radius: 0.625rem;
+}
+.blog-friendlink h3{
+	color: #e68181;
+	text-align: left;
+	padding-left: 0.625rem;
+	margin-top: 0.5rem;
+	font-size: 1rem;
+	letter-spacing: 0.25rem;
+}
+
+.blog-friendlink ul{
+	margin:auto;
+	width:90%;
+	height:83%;
+	margin-top: 0.625rem;
+	overflow: auto;
+}
+.blog-friendlink ul::-webkit-scrollbar{
+	display: none;
+}
+.blog-friendlink ul li{
+	height:1.5rem;
+}
+.blog-friendlink ul li a{
+	text-decoration: none;
+	color: #000000;
+	margin-bottom: 0.5rem;
+	transition: all 0.1s;
+	font-size: 1.125rem;
+	line-height: 1.125rem;
+}
+
+.blog-friendlink ul li a:hover{
+	text-decoration: underline;
+	color: #84bcc3;
+}
+
+.blog-friendlink ul li::before{
+	content: "";
+	height: 0.875rem;
+	width: 0.875rem;
+	border-radius: 50%;
+	/* background-color: #c62f2f; */
+	background-image: url(../img/friend-link.png);
+	background-size: cover;
+	display: block;
+	/* margin-left: 0.1em; */
+	float: left;
+	margin-top: 0.5em;
+	margin-right: 0.5em;
+}
+
+/* 博客公告板 */
+.blog-notice{
+	position: absolute;
+	/* border: 1px solid black; */
+	width: 20.625rem;
+	height: 12.5rem;
+	right: 2.5rem;
+	top: 6.125rem;
+	/* background-color: rgb(103 198 241); */
+	/* background-image: url(../img/notice-board.jpg); */
+	background-color: #e3e3e3;
+	background-size: cover;
+	box-shadow: 0.0625rem 0.125rem 0.3125rem #648186;
+	border-radius: 0.625rem;
+	box-sizing: border-box;
+	border: 0.25rem dotted #788c93;
+}
+
+.blog-notice h1{
+	color: #2c6ea7;
+	text-align: center;
+	margin-top: 0.5rem;
+	font-size: 1.75rem;
+}
+
+.blog-notice ul{
+	margin:auto;
+	width:90%;
+	height:65%;
+	margin-top: 0.625rem;
+	/* border: 1px solid; */
+	overflow: auto;
+}
+.blog-notice ul::-webkit-scrollbar{
+	display: none;
+}
+
+.blog-notice ul li{
+	color:black;
+	margin-bottom: 0.625rem;
+	/* text-indent: 2em; */
+}
+.blog-notice ul li::before{
+	content: "";
+	height: 0.3125rem;
+	width: 0.3125rem;
+	border-radius: 50%;
+	background-color: #336175;
+	display: block;
+	margin-left: 0.2em;
+	float: left;
+	margin-top: 0.5em;
+	margin-right: 1em;
+}
+
+/* 博客归档 */
+.blog-collection{
+	position: absolute;
+	/* border: 1px solid black; */
+	width: 20.625rem;
+	min-height: 33rem;
+	right: 2.5rem;
+	top: 24.875rem;
+	/* background-color: rgb(253 255 228); */
+	background-color: #e3e3e3;
+	box-shadow: 0.0625rem 0.125rem 0.3125rem #648186;
+	border-radius: 0.625rem;
+	padding-bottom: 1rem;
+}
+
+.blog-collection h2{
+	/* background-color: #DEB887; */
+	font-size: 1rem;
+	margin-top: 0.3125rem;
+	padding-left: 0.625rem;
+}
+.blog-collection h2::after{
+	content: "";
+	display: block;
+	width:95%;
+	border: 0.0625rem solid gray;
+	border-radius: 50%;
+}
+.blog-collection ul{
+	/* border: 1px solid; */
+	width:95%;
+	/* height:29rem; */
+	margin: auto;
+	margin-top: 0.625rem;
+	
+	overflow-y: auto;
+	
+}
+.blog-collection ul::-webkit-scrollbar{
+	display: none;
+}
+.blog-collection ul li{
+	/* border: 1px solid; */
+	width: 100%;
+	height:2.75rem;
+	box-sizing: border-box;
+	cursor:pointer;
+	font-size: 1.125rem;
+	line-height: 3rem;
+	margin-top: 0.625rem;
+	
+	transition: all 0.1s;
+}
+.blog-collection a{
+	color: black;
+}
+.blog-collection a:hover{
+	color: #2C6EA7;
+}
+.blog-collection ul li:hover{
+	/* border: 1px solid; */
+	border-right: 0.5rem solid #8cac7b;
+	transform: translateX(-0.5rem);
+}
+.blog-collection-selected,
+.blog-collection-selected:hover{
+	border-right: 0.5rem solid #ba523d !important;
+}
+.blog-collection ul li img{
+	display: block;
+	float: left;
+	/* border: 1px solid; */
+	width:2.5rem;
+	height:2.5rem;
+	margin-left:0.5rem;
+	border-radius: 10%;
+	/* margin-top:calc(50% - 0.8rem); */
+}
+.blog-collection ul li span:first-of-type{
+	float: left;
+	margin-left: 0.625rem;
+}
+.blog-collection ul li span:last-of-type{
+	float: right;
+	font-size: 0.875rem;
+	color: gray;
+	margin-right: 0.3125rem;
+}
+
+
+/* 博客检索 */
+.blog-search{
+	position: absolute;
+	width: 20.625rem;
+	height: 5rem;
+	right: 2.5rem;
+	top: 19.25rem;
+	/* background-color: rgb(253 255 228); */
+	background-color: #e3e3e3;
+	box-shadow: 0.0625rem 0.125rem 0.3125rem #648186;
+	border-radius: 0.625rem;
+}
+.blog-search input[type=text]{
+	width: 16.25rem;
+	height: 2.5rem;
+	margin-top: 1.25rem;
+	margin-left: 1.875rem;
+	border-radius: 0.75rem;
+	box-sizing: border-box;
+	padding-left: 0.625rem;
+	padding-right: 0.625rem;
+	text-overflow: ellipsis;
+	background-color: #e3e3e3;
+	border: 0px;
+	font-size: 1rem;
+	/* background-image: url(../img/search-box.jpg); */
+	box-shadow: 0px 0px 0.3rem #2b383d;
+	
+	transition: all 0.3s;
+}
+.blog-search input[type=text]:focus,
+.blog-search input[type=text]:hover{
+	outline: none;
+	width: 16.25rem;
+	background-color: #e3e3e3;
+	border: 0.0625rem solid burlywood;
+}

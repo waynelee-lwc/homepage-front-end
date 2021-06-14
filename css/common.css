@@ -1,0 +1,77 @@
+body{
+	background-color: #f6f7de;
+	position: relative;
+}
+
+body,html{
+	height:100%;
+}
+*{
+	padding:0px;
+	margin: 0px;
+	/* transition: all 0.1s; */
+}
+ul{
+	list-style: none;
+}
+
+html{
+	font-size: 16px;
+}
+
+a{
+	text-decoration: none;
+}
+
+a:any-link{
+	color: unset;
+}
+
+input,button,textarea:focus{
+	outline: none;
+}
+
+
+.clear::after{
+	content: "";
+	display: block;
+	heigth:0rem;
+	clear: both;
+}
+
+.footer{
+	position: absolute;
+	width: 100%;
+	height: 5rem;
+	bottom: 0rem;
+	animation: apperence 1s;
+}
+
+.footer .container p{
+	text-align: center;
+	color: gray;
+	font-size: 1.125rem;
+	margin-top: .25rem;
+	
+	transition: all .2s;
+}
+
+.footer .container p:hover{
+	color: skyblue;
+}
+
+.footer>.container>a>p::before{
+    display: inline-block;
+    content: "";
+    background-image: url(../img/webLog.png);
+    height: 1.5rem;
+    width: 1.5rem;
+    background-size: cover;
+    margin-right: .5rem;
+    transform: translateY(.25rem);
+}
+
+@keyframes apperence{
+	from{opacity: 0;}
+	to{opacity: 1;}
+}

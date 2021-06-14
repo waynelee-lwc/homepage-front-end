@@ -1,0 +1,96 @@
+/* 导航栏 */
+.general-nav{
+	/* border: 1px solid; */
+	height: 3.25rem;
+	width: 100%;
+	/* background-color: white; */
+	box-shadow: 0px 0px 0.625rem black;
+	/* background-color: #e3e3e3; */
+}
+
+/* 导航栏内容 */
+.general-nav-content{
+	/* border: 0.0625rem solid; */
+	height:100%;
+	width:90%;
+	margin: auto;
+}
+
+.general-nav-content div{
+	height:100%;
+	/* border: 1px solid; */
+	float: left;
+}
+.general-nav-content div li{
+	height:3.25rem;
+	float: left;
+	/* border: 1px solid; */
+}
+
+.general-nav-content-bloger{
+	width:12.5rem;
+}
+.general-nav-content-bloger img{
+	height: 2.75rem;
+	width: 2.75rem;
+	border-radius: 50%;
+	/* border: 0.1875rem solid blue; */
+	box-sizing: border-box;
+	margin-top: 0.25rem;
+	box-shadow: 0px 0px 0.4375rem #366533;
+}
+.general-nav-content-bloger p{
+	line-height: 3.25rem;
+	padding-left: 1.25rem;
+	font-size: 1.375rem;
+	color: #434343;
+	
+	transition: all 0.2s;
+}
+.general-nav-content-bloger img:hover{
+	box-shadow: 0px 0px 0.625rem mediumpurple;
+}
+.general-nav-content-bloger p:hover{
+	color: #366533;
+	font-weight: bold;
+}
+
+
+.general-nav-content-links{
+	width:43.75rem;
+	margin-left: 12.5rem;
+}
+.general-nav-content-links ul{
+	display: flex;
+	justify-content: space-around;
+}
+.general-nav-content-links li{
+	width:7.5rem;
+	/* border: 1px solid; */
+	display: flex;
+	cursor: pointer;
+	transition: all 0.2s;
+}
+
+.general-nav-content-links li a{
+	font-size: 1.25rem;
+	color: #434343;
+	margin: auto;
+	justify-self: center;
+}
+
+.general-nav-content-links li:hover{
+	box-shadow: 0px 0px 0.625rem #4A444E;
+	/* height: 3rem; */
+	transform: translateY(-0.25rem);
+}
+
+	
+.general-nav-content-links-selected{
+	box-shadow: 0px 0px 0.5rem #296c42;
+}
+
+.general-nav-content-links li:hover a{
+	color: #366533;
+	font-weight: bold;
+}

@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>欢迎来到卷卷毛的个人空间</title>
+		
+		<link rel="stylesheet" href="css/index-rem.css"/>
+		<link rel="stylesheet"	href="css/common.css" />
+		
+		<link rel="shortcut icon" href="./ico/icon.png" type="image/x-icon">
+	
+		<link rel="stylesheet"  href="css/birthday.css"/>
+	</head>
+	<body>
+		
+		<!-- 首页 -->
+		<div class="bg" id="bg">
+			<div class="canvas" style="" v-show="canvas">
+				<!-- <h1>asdfasdfsaf</h1> -->
+				<!-- <div class="cake"></div> -->
+			</div>
+			<!-- 弹幕播放键 -->
+			<div class="bg-canvas-controller" @click="canvas = !canvas">
+				<div class="bg-canvas-controller-wrapper">
+					<h2>{{canvas?'停':'启'}}</h2>
+				</div>
+			</div>
+			
+			<div class="bg-cover">
+				<!-- 导航栏 -->
+				<div class="bg-nav">
+					<ul>
+						<li><a href="./blog.html">博客园</a></li>
+						<li><a href="./friends.html">友人录</a></li>
+						<li><a href="./resource.html">资源墙</a></li>
+						<li><a href="./note.html">留言板</a></li>
+					</ul>
+				</div>
+				<!-- 用户框 -->
+				<div class="bg-user">
+					<ul v-if="user == null || user == ''">
+						<li @click="userSelected.login ? hideLogin():showLogin()" :class="{'bg-user-selected':userSelected.login}">登录</li>
+						<li @click="userSelected.register? hideRegister():showRegister()" :class="{'bg-user-selected':userSelected.register}">注册</li>
+					</ul>
+					<ul v-else>
+						<li @click="logout()">欢迎回家，{{user.nickname}}</li>
+					</ul>
+				</div>
+				
+				<!-- 网站介绍 -->
+				<div class="bg-about">
+					<a href="about.html"><p>关于本站</p></a>
+				</div>
+				
+				<a href="blog.html">
+				<div class="bg-icon"></div>
+				<div class="bg-title">
+					<p>waynelee's blog</p>
+				</div>
+				</a>
+				<div class="bg-search">
+					<input type="text" placeholder="检索文章" v-model="blogRetrieval" @keypress.enter="retrivalBlog()" />
+					<button @click="retrivalBlog()">搜索</button>
+				</div>
+				
+				<!-- 登录框 -->
+				<div class="bg-login">
+<!-- 					<div class="bg-login-title">
+						<p>登录</p>
+					</div> -->
+					<div class="bg-login-phone">
+						<input type="text" placeholder="敢问少侠电话" v-model="userLogin.phone" @keyup.enter="login"/>
+					</div>
+					<div class="bg-login-password">
+						<input type="password" placeholder="敢问少侠密码" v-model="userLogin.password" @keyup.enter="login"/>
+					</div>
+					<div class="bg-login-submit">
+						<button @click="login()">登录</button>
+					</div>
+				</div>
+				
+				<!-- 注册框 -->
+				<div class="bg-register">
+					<div class="bg-register-phone">
+						<input type="text" placeholder="少侠留下电话" v-model="userRegister.phone" @keyup.enter="register"/>
+					</div>
+					<div class="bg-register-password">
+						<input type="text" placeholder="敢问少侠昵称" v-model="userRegister.nickname" @keyup.enter="register"/>
+					</div>
+					<div class="bg-register-password">
+						<input type="password" placeholder="少侠留下密码" v-model="userRegister.password" @keyup.enter="register"/>
+					</div>
+					
+					<div class="bg-register-submit">
+						<button @click="register()">注册</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<footer class="footer">
+			<div class="container">
+				<p>©版权所有：Designed by 卷卷毛</p>
+				<a href="http://beian.miit.gov.cn" target="_blank"><p>豫ICP备2021010363号</p></a>
+			</div>
+		</footer>
+		
+	</body>
+</html>
+<script src="js/vue.js"></script>
+<script src="js/jquery-3.5.1.js"></script>
+<script src="js/index.js"></script>
+<script src="js/commen.js"></script>
+
+<script>
+	$(function(){
+		var canvas = $('.canvas');
+		
+		for(var i = 0;i < 30 ;i++){
+			console.log(Math.random());
+			var style = 'style="';
+			style += 'left:' + Math.floor(Math.random() * 100) + '%;';
+			style += 'animation-delay:' + Math.floor(Math.random() * 5) + 's;'
+			style += 'animation-duration:' + (3 + Math.random() * 6) + 's;'
+			style += 'background-image:url(./img/birthday%20cake' + Math.ceil(Math.random() * 3) + '.png);'
+			style += '"';
+			var div = $('<div class="cake"' + style + '></div>');
+			// div.style.left = Math.random() * 100 + '%';
+			canvas.append(div);
+		}
+		// var div = document.createElement('div');
+		// div.class
+		// canvas.append('<div class="cake"></div>')
+	})
+	
+	function getImg(k){
+		switch(k){
+			case 1:return '';
+			case 2:return '';
+			case 3:return '';
+		}
+	}
+	
+</script>

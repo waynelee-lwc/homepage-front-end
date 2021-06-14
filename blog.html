@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>博客园</title>
+		<link rel="stylesheet" href="css/common.css" />
+		<link rel="stylesheet" href="./css/blog.css"/>
+		<link rel="stylesheet" href="css/nav.css" />
+		<link rel="shortcut icon" href="./ico/icon.png" type="image/x-icon">
+	</head>
+	<body>
+		<!-- 博客页 -->
+		<div class="blog" id="blog-page">
+			<!-- 导航栏 -->
+			<div class="general-nav">
+				<div class="general-nav-content">
+					<div class="general-nav-content-bloger">
+						<ul>
+							<li><a href="index.html"><!-- <img src="img/icon.jpg"/> --></a></li>
+							<li><a href="index.html"><p>卷卷毛's 主页</p></a></li>
+						</ul>
+					</div>
+					<div class="general-nav-content-links">
+						<ul>
+							<li class="general-nav-content-links-selected"><a href="blog.html">博客园</a></li>
+							<li><a href="./friends.html">友人录</a></li>
+							<li><a href="./resource.html">资源墙</a></li>
+							<li><a href="./note.html">留言板</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<!-- 主页链接 -->
+			<!-- <div class="blog-indexlink">
+				<a :href="'./index.html'">
+				<p>主页</p>
+				<img src="img/menu.png" />
+				</a>
+			</div> -->
+			<!-- 博客园标题 -->
+			<div class="blog-title"></div>
+			<!-- 博主信息 -->
+			<div class="blog-info">
+				<!-- 博主信息-头像 -->
+				<a href="index.html"><div class="blog-info-icon"></div></a>
+				<!-- 博主信息-座右铭 -->
+				<div class="blog-info-motto">
+					<ul>
+						<li>技术宅</li>
+						<li>好撸铁</li>
+						<li>单身狗</li>
+					</ul>
+				</div>
+				<!-- 博主信息-昵称 -->
+				<div class="blog-info-name">
+					<span>wayne-lee-lwc</span>
+					<span>卷卷毛</span>
+				</div>
+				<div class="blog-info-school">
+					<a href="https://www.jlu.edu.cn/"><span>吉林大学</span></a>
+				</div>
+				<!-- 博主信息-创作统计 -->
+				<div class="blog-info-count">
+					<div class="blog-info-count-artical">
+						<p>文章数</p>
+						<p>{{blogCount}}</p>
+					</div>
+					<div class="blog-info-count-collection">
+						<p>分栏数</p>
+						<p>{{columnCount}}</p>
+					</div>
+				</div>
+				<!-- 博主信息-联系方式 -->
+				<div class="blog-info-contact">
+					<span>联系方式:</span>
+					<ul>
+						<li><a title="1418551940"><img src="img/QQ.png"/></a></li>
+						<li><a title="13180798010"><img src="img/wx.png"/></a></li>
+						<li><a href="https://wayne-lee-jlu.blog.csdn.net/"><img src="img/csdn.png"/></a></li>
+						<li><a><img src="img/github.png"/></a></li>
+					</ul>
+				</div>
+				
+			</div>
+			<!-- 友情链接 -->
+			<div class="blog-friendlink">
+				<h3>友情链接</h3>
+				<ul>
+					<li v-for="(link,idx) in friendLink">
+						<a :href="link.address">{{link.name}}</a>
+					</li>
+				</ul>
+			</div>
+			<!-- 博客预览 -->
+			<div class="blog-preview">
+				
+				<div class="blog-preview-content">
+					
+					<div class="blog-preview-total">
+						<p>共找到&nbsp;{{blogList.length}}&nbsp;篇</p>
+					</div>
+					<div class="blog-preview-container" v-for="(blog,idx) in blogList" :style="{'animation-delay':idx/10+'s'}">
+						<div class="blog-preview-container-title">
+							<a :href="'./artical.html?bid=' + blog.id"><h2>{{blog.title}}</h2></a>
+						</div>
+						<div class="blog-preview-container-text">
+							<p>{{blog.abst}}</p>
+						</div>
+						<div class="blog-preview-container-label">
+							<ul>
+								<li>{{blog.publishTime}}</li>
+								<li>
+									<a v-for="(col) in blog.column">{{col.name}}</a>
+								</li>
+								<li>{{blog.visits}}</li>
+								<li>{{blog.comments}}</li>
+								<li>分享</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				
+			</div>
+			<!-- 博客检索 -->
+			<div class="blog-search">
+				<input type="text" name="blogName" placeholder="检索文章标题" @keyup.enter="loadBlogs" @focusout="loadBlogs" v-model.lazy="blogRetrieval.title"/>
+			</div>
+			<!-- 博客园公告 -->
+			<div class="blog-notice">
+				<h1>公告板</h1>
+				<ul>
+					<li v-for="(notice,idx) in noticeList">
+						{{notice.text}}
+						<!-- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;——{{notice.pbTime}} -->
+					</li>
+				</ul>
+			</div>
+			<!-- 博客分类 -->
+			<div class="blog-collection">
+				<h2>分栏</h2>
+				<ul>
+					<li v-for="(col,idx) in columnList" @click="blogRetrieval.cid = blogRetrieval.cid == col.id ? '' : col.id;loadBlogs()" :class="{'blog-collection-selected':(blogRetrieval.cid == col.id)}">
+						<a>
+						<img :src="col.icon"/>
+						<span>{{col.name}}</span>
+						<span>{{col.blogCount}}篇</span>
+						</a>
+					</li>
+				</ul>
+			</div>
+			<footer class="footer">
+				<div class="container">
+					<p>©版权所有：Designed by 卷卷毛</p>
+					<a href="http://beian.miit.gov.cn" target="_blank"><p>豫ICP备2021010363号</p></a>
+				</div>
+			</footer>
+		</div>
+	</body>
+</html>
+<script src="js/vue.js"></script>
+<script src="js/jquery-3.5.1.js"></script>
+<script src="js/commen.js"></script>
+<script src="js/blog.js"></script>

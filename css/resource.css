@@ -1,0 +1,214 @@
+.rsboard{
+	min-height: 100%;
+	width:100%;
+	background-image: url(../img/bg13.jpg);
+	background-size: cover;
+	background-attachment: fixed;
+	position: relative;
+	padding-bottom: 6rem;
+}
+
+.rsboard-upload{
+	/* border: 1px solid; */
+	width:16%;
+	min-height: 35rem;
+	margin-top: 3.125rem;
+	float: left;
+	margin-left: 1.875rem;
+	background-color: #ffffff5c;
+	box-shadow: 0px 0px 0.625rem #808080;
+	
+	position: sticky;
+	top: 2.5rem;
+	left: 1.875rem;
+}
+
+.rsboard-display{
+	float: left;
+	/* border: 1px solid; */
+	width: 78%;
+	min-height: 50rem;
+	margin-top: 3.125rem;
+	margin-left: 1.25rem;
+	background-color: #ffffff5c;
+	box-shadow: 0px 0px 0.625rem #808080;
+	padding-top: 3rem;
+}
+
+.rsboard-retrieval{
+	/* float: left; */
+	clear: both;
+	width: 90%;
+	margin: auto;
+	min-height: 25rem;
+	/* border: 1px solid; */
+	background-color: white;
+	margin-top: 3.125rem;
+	box-shadow: 0px 0px 0.625rem #808080;
+}
+
+.rsboard-upload h3{
+    text-align: center;
+    padding-top: 0.625rem;
+	margin-bottom: 1.125rem;
+}
+
+.rsboard-upload ul{
+	box-shadow: 0px 0px 0px #004444;
+	margin: auto;
+	width: 90%;
+	padding-bottom: 1rem;
+	border: 0.125rem dotted gray;
+}
+
+.rsboard-upload li {
+	width: 7.5rem;
+    margin: auto;
+    height: 4.75rem;
+    margin-top: 0.75rem;
+    border-radius: 0.75rem;
+    padding: 0.625rem;
+    box-sizing: border-box;
+    background-color: #e8d4b2;
+    cursor: pointer;
+    float: left;
+    margin-left: 0.75rem;
+    border: 0.25rem double #99968b;
+    
+	transition: all 0.2s;
+}
+
+.rsboard-upload li:hover{
+	color: #2196f3;
+	box-shadow: 0px 0px 0.625rem dimgrey;
+}
+
+.colSelected{
+	box-shadow: 0px 0px 0.5rem #007BFF;
+    background-color: #eaddbf !important;
+}
+
+.rsboard-upload li p{
+	font-size: 1.125rem;
+    text-align: center;
+}
+
+.rsboard-display-collection{
+    width: 95%;
+    margin: auto;
+    margin-bottom: 1.75rem;
+    background-color: #efefef;
+    min-height: 18.75rem;
+    border-radius: 0.75rem;
+	padding-bottom: 1.25rem;
+	box-shadow: 0rem 0rem .5rem gray;
+	
+	animation-name: enter;
+	animation-duration: 1s;
+}
+
+.rsboard-display-collection-title{
+    text-align: center;
+    color: gray;
+    font-size: 1.25rem;
+    padding: 0.3125rem;
+}
+
+.rsboard-display-collection-title::after{
+	display: block;
+	content: "";
+	width: 95%;
+	margin: auto;
+	border: 0.0625rem solid gray;
+	box-sizing: border-box;
+	border-radius: 50%;
+}
+
+.rsboard-display-collection-link{
+    float: left;
+    height: 7.5rem;
+    /* border: 1px solid; */
+    width: 26.25rem;
+    margin-top: 0.75rem;
+    margin-left: 2.25rem;
+    box-sizing: border-box;
+    border-radius: 0.625rem;
+    background-color: #b3e5fc;
+    padding: 0.375rem;
+    transition: all 0.3s;
+    border: 0.25rem dotted #e8d4b2;
+	
+	transition: all 0.3s;
+}
+
+.rsboard-display-collection-link:hover{
+	box-shadow: 0px 0.25rem 0.5rem dimgray;
+	transform: translateY(-0.5rem);
+}
+
+.rsboard-display h2{
+	
+}
+
+.rsboard-display-collection-link-title{
+    float: left;
+    width: 20rem;
+    height: 3rem;
+    /* border: 1px solid; */
+}
+
+.rsboard-display-collection-link-title h3{
+	padding: 0.125rem;
+	/* color: #00bcd4; */
+	font-size: 1.25rem;
+}
+
+.rsboard-display-collection-link-intro{
+	float: left;
+    margin-top: 0.125rem;
+    /* border: 1px solid; */
+    width: 23.75rem;
+    margin-left: 1.0625rem;
+    height: 3rem;	
+	display: none;
+	text-align: center;
+	
+	transition: all 0.2s;
+}
+
+.rsboard-display-collection-link:hover>
+.rsboard-display-collection-link-intro{
+	display: block;
+}
+
+.rsboard-display-collection-link-intro p{
+	color: #0d47a1;
+}
+
+.rsboard-display-collection-link-icon{
+    float: left;
+    height: 2.5rem;
+    width: 2.5rem;
+    /* border: 2px solid; */
+    margin-left: 0.9375rem;
+    /* border-radius: 50%; */
+    margin-right: 1.25rem;
+	overflow: hidden;
+}
+
+.rsboard-display-collection-link-icon img{
+	height: 100%;
+	width: 100%;
+}
+
+
+@keyframes enter{
+	from{
+		transform: translateY(10rem);
+		opacity: 0;
+	}
+	to{
+		transform: translateY(0rem);
+		opacity: 1;
+	}
+}

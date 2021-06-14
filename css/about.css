@@ -1,0 +1,226 @@
+.about{
+	min-height: 100%;
+	width: 100%;
+	background-image: url(../img/bg4.jpg);
+	background-attachment: fixed;
+	background-size: 100% 100%;
+	position: relative;
+}
+
+/* 关于网站 */
+.about-indexlink{
+	height: 3.75rem;
+	/* margin: auto; */
+	/* box-shadow: 0px 0px 0.8125rem #d0caca; */
+	background-color: rgb(72 99 121 / 50%);
+	border-bottom-right-radius: 0.3125rem;
+	/* border-bottom-right-radius: 0.3125rem; */
+	
+	position: fixed;
+	left: 0rem;
+	top: 0rem;
+	padding-left:0.9375rem ;
+	padding-right: 0.9375rem;
+	max-width: 15rem;
+	min-width: 9rem;
+	box-shadow: 0px 0px 0.8125rem #293540;
+	
+	animation-name: apperence,nav;
+	animation-duration: 2s;
+}
+
+.about-indexlink p{
+	display: block;
+	text-align: center;
+	padding-left: 1.25rem;
+	padding-right: 1.25rem;
+	cursor: pointer;
+	color: #a8c8e0;
+	font-size: 1.5rem;
+	float: left;
+	height: 100%;
+	box-sizing: border-box;
+	/* max-width: 13rem; */
+	overflow: hidden;
+	display: flex;
+	vertical-align: middle;
+	align-items: center;
+}
+
+.about-indexlink p:hover{
+	box-shadow: 0px 0px 0.5rem;
+	color: #cacdca;
+}
+
+/* 关于列表 */
+.about-content{
+	/* border: 1px solid; */
+	width:40%;
+	min-height: 62.5rem;
+	margin: auto;
+	/* box-shadow: 0px 0px 2rem #b7b6b4; */
+	background-color: #e3e3e356;
+	padding-top: 6.25rem;
+	padding-bottom: 9.375rem;
+}
+
+.about-content-update{
+	margin: auto;
+	width: 80%;
+	/* border: 1px solid; */
+	margin-top: 3.125rem;
+}
+
+.about-content-update-title{
+	/* border: 1px solid; */
+	text-align: center;
+}
+
+.about-content-update li{
+	/* border: 1px solid; */
+	height: 13rem;
+	margin-bottom: 1rem;
+	border:.25rem double #b5910f;
+	border-left: 0.25rem solid #b5910f;
+	position: relative;
+	
+	/*生日配色*/
+	background-color: #faed7687;
+	
+	/*春节风配色*/
+	/* background-color: #a286868c; */
+}
+
+.about-content-update li::before{
+	content: "";
+	height: 2.25rem;
+	width: 2.25rem;
+	/* background-color: #b5b5b5; */
+	display: block;
+	border-radius: 50%;
+	position: absolute;
+	top: -1.5625rem;
+	left: -1.25rem;
+	z-index: 1;
+	
+	/*生日风格*/
+	background-image:url(../img/birthday%20cake1.png);
+	
+	/*春节风格*/
+	/* background-image: url(../img/lantern.png); */
+	background-size: cover;
+}
+
+.about-content-update-time{
+	margin: auto;
+	width: 90%;
+	/* border: 1px solid; */
+	font-size: 1.375rem;
+	padding-top: 0.875rem;
+	
+	/*生日风配色*/
+	color: #5e560c;
+	/*春节风配色*/
+	/* color: #440404; */
+	text-align: center;
+}
+.about-content-update-text{
+	margin: auto;
+	width: 90%;
+	/* border: 1px solid; */
+	height: 58%;
+	margin-top: 0.25rem;
+	
+	/*生日配色*/
+    background-color: #ffda3554;
+    font-size: 1.125rem;
+    border-left: 0.1875rem solid #ff9800;
+    border-right: 0.1875rem solid #ff9800;
+	
+	/*春节配色*/
+	/* background-color: #a286868c;
+	font-size: 1.125rem;
+	border-left: 0.1875rem solid #6b0e0e;
+	border-right: 0.1875rem solid #6b0e0e; */
+	padding: 0.5rem;
+	color: #795548;
+	/* text-align: center; */
+}
+.about-content-update-like{
+	/* border: 1px solid; */
+	width: 3.125rem;
+	float: right;
+	margin-top: 0.125rem;
+	font-size: 1.125rem;
+	cursor: pointer;
+}
+
+.about-content-update-like::before{
+	content: "";
+	display: block;
+	float: left;
+	height: 1.125rem;
+	width: 1.125rem;
+	background-image: url(../img/like.png);
+	background-size: cover;
+	margin-right: 0.3125rem;
+	/* background-color: red; */
+}
+
+.about-content-update-like:hover{
+	color: white;
+}
+
+.about-content-update-like:hover::before{
+	background-image: url(../img/liking2.png);
+}
+
+.about-content-webinfo-title{
+	text-align: center;
+	width: 85%;
+	margin: auto;
+	margin-bottom: 1rem;
+	/* background-color: #e3e3e3a0; */
+	/* box-sizing: border-box; */
+	/* border-left: 1rem solid #636363; */
+}
+
+.about-content-webinfo{
+    /* border: 1px solid; */
+    width: 95%;
+	padding: .5rem 0rem;
+    margin: auto;
+    margin-top: 1rem;
+	margin-bottom: 2rem;
+}
+
+.about-content-webinfo-list{
+    border: 0.1875rem dashed #89bde8;
+    width: 85%;
+    margin: auto;
+    min-height: 15rem;
+    background-color: #e0f1ff91;
+    box-sizing: border-box;
+    padding: 1rem;
+}
+
+.about-content-webinfo-list-node{
+    /* border: 1px solid; */
+    margin: auto;
+    width: 95%;
+    height: 2.5rem;
+    margin-top: 0.5rem;
+    margin-bottom: .5rem;
+    /* background-color: #a286868c;*/
+}
+
+.about-content-webinfo-list-node p{
+	line-height: 2.5rem;
+	font-size: 1.25rem;
+	display: inline;
+}
+
+.about-content-webinfo-list-node p:last-of-type{
+	font-weight: bold;
+	font-size: 1.375rem;
+}

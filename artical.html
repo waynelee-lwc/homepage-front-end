@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<link rel="stylesheet" href="css/common.css"/>
+		<link rel="stylesheet" href="css/artical.css"/>
+		<link rel="stylesheet" href="css/nav.css" />
+		
+		<!-- <link rel="stylesheet" href="css/style.css" /> -->
+		 <link rel="stylesheet" href="./editormd/css/editormd.css" >
+		<link rel="stylesheet" href="editormd/css/editormd.preview.css" />
+		<link rel="shortcut icon" href="./ico/icon.png" type="image/x-icon">
+		<!-- <link rel="stylesheet" href="../css/editormd.preview.css" /> -->
+		<!-- <link rel="shortcut icon" href="https://pandao.github.io/editor.md/favicon.ico" type="image/x-icon" /> -->
+	</head>
+	<body>
+		<div id="artical" class="artical">
+			<!-- 导航栏 -->
+			<div class="general-nav">
+				<div class="general-nav-content">
+					<div class="general-nav-content-bloger">
+						<ul>
+							<li><a href="index.html"><!-- <img src="img/icon.jpg"/> --></a></li>
+							<li><a href="index.html"><p>卷卷毛's 主页</p></a></li>
+						</ul>
+					</div>
+					<div class="general-nav-content-links">
+						<ul>
+							<li class="general-nav-content-links-selected"><a href="blog.html">博客园</a></li>
+							<li><a href="./friends.html">友人录</a></li>
+							<li><a href="resource.html">资源墙</a></li>
+							<li><a href="./note.html">留言板</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<!-- 文章内容 -->
+			<div class="artical-content">
+				<!-- 文章标题 -->
+				<div class="artical-content-title">
+					<p>{{blog.title}}</p>
+				</div>
+				<!-- 文章标签 -->
+				<div class="artical-content-label">
+					<ul>
+						<li>{{blog.publishTime}}</li>
+						<li>
+							<a v-for="(col) in blog.column" :href="'./blog.html?cid=' + col.id">{{col.name}}</a>
+						</li>
+						<li>{{blog.visits}}</li>
+						<li>{{blog.comments}}</li>
+						<li>分享</li>
+					</ul>
+				</div>
+				<div id="artical-content-text" class="artical-content-text">
+					<textarea style="display: none;"></textarea>
+				</div>
+				
+				<div class="artical-content-footer">
+					<div class="artical-content-footer-copyright">
+						<ul>
+							<li>本文作者：wayne-lee</li>
+							<li>版权声明：本文为博主原创文章，遵循 <a href="http://creativecommons.org/licenses/by-sa/4.0/">CC 4.0 BY-SA </a>版权协议，转载请附上原文出处链接和本声明。</li>
+						</ul>
+					</div>
+				</div>
+				
+				<!-- <div class="artical-content-share">
+					<ul>
+						<li></li>
+					</ul>
+				</div> -->
+			</div>
+			
+			<!-- 文章评论列表 -->
+			<div class="artical-comment">
+				<div class="artical-comment-title">
+					<p>评论列表</p>
+				</div>
+				<div class="artical-comment-publish clear">
+					<!-- <span>发表评论，和博主互动~</span> -->
+					<textarea placeholder="发表评论,和博主互动~" v-model="commentEditing.text" ></textarea>
+					<button @click="publishComment()">发表</button>
+				</div>
+				<div class="artical-comment-list">
+					<ul class="clear">
+						<li v-for="(comment,idx) in blog.comment">
+							<span>{{comment.user.nickname}}：</span>
+							<span>{{comment.publishTime}}</span>
+							<p>{{comment.text}}</p>
+							<span @click="like(idx)">{{comment.likes}}</span>
+						</li>
+					</ul>
+				</div>
+			</div>
+			
+			
+		</div>
+	</body>
+</html>
+<script src="js/jquery-3.5.1.js"></script>
+<script src="js/vue.js"></script>
+<script src="js/commen.js"></script>
+
+<script src=" editormd/editormd.min.js"></script>
+<script src="./editormd/editormd.js"></script>
+<script src=" editormd/lib/marked.min.js"></script>
+<script src=" editormd/lib/prettify.min.js"></script>
+<script src=" editormd/lib/raphael.min.js"></script>
+<script src=" editormd/lib/underscore.min.js"></script>
+<script src=" editormd/lib/sequence-diagram.min.js"></script>
+<script src=" editormd/lib/flowchart.min.js"></script>
+<script src=" editormd/lib/jquery.flowchart.min.js"></script>
+
+
+
+
+<script src="js/artical.js"></script>

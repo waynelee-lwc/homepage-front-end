@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>关于本站</title>
+		
+		<link rel="stylesheet" href="css/common.css" />
+		<link rel="stylesheet" href="css/about.css"/>
+		<link rel="shortcut icon" href="./ico/icon.png" type="image/x-icon">
+	</head>
+	<body>
+		<div class="about">
+			<div class="about-indexlink">
+				<a href="index.html"><p>返回主页</p></a>
+			</div>
+			<!-- 关于列表 -->
+			<div class="about-content">
+				
+				
+				<div class="about-content-webinfo">
+					<h2 class="about-content-webinfo-title">网站信息</h2>
+					<ul class="about-content-webinfo-list">
+						<li class="about-content-webinfo-list-node">
+							<p>前端框架</p>
+							&nbsp;&nbsp;
+							<p>Vue、jQuery</p>
+						</li>
+						<li class="about-content-webinfo-list-node">
+							<p>博客组件</p>
+							&nbsp;&nbsp;
+							<p>EditorMd</p>
+						</li>
+						<li class="about-content-webinfo-list-node">
+							<p>部署环境</p>
+							&nbsp;&nbsp;
+							<p>Linux</p>
+						</li>
+						<li class="about-content-webinfo-list-node">
+							<p>后端框架</p>
+							&nbsp;&nbsp;
+							<p>Spring Boot</p>
+						</li>
+						<li class="about-content-webinfo-list-node">
+							<p>ORM框架</p>
+							&nbsp;&nbsp;
+							<p>Mybatis</p>
+						</li>
+						<li class="about-content-webinfo-list-node">
+							<p>数据库</p>
+							&nbsp;&nbsp;
+							<p>MySQL</p>
+						</li>
+					</ul>
+				</div>
+				
+				<h2 class="about-content-update-title">开发日志</h2>
+				<ul class="about-content-update">
+					<li v-for="(record,idx) in editionRecord">
+						<p class="about-content-update-time">{{record.publishTime.split(' ')[0]}}</p>
+						<p class="about-content-update-text">{{record.text}}</p>
+						<p class="about-content-update-like" @click="like(idx)">{{record.likes}}</p>
+					</li>
+				</ul>
+			</div>
+			<footer class="footer">
+				<div class="container">
+					<p>©版权所有：Designed by 卷卷毛</p>
+					<a href="http://beian.miit.gov.cn" target="_blank"><p>豫ICP备2021010363号</p></a>
+				</div>
+			</footer>
+		</div>
+		
+	</body>
+</html>
+<script src="js/vue.js"></script>
+<script src="js/jquery-3.5.1.js"></script>
+<script src="js/commen.js"></script>
+<script src="js/about.js"></script>
