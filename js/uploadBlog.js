@@ -19,7 +19,7 @@ var uploadBlog = new Vue({
 		loadColumnList:function(){
 			var that = this;
 			$.ajax({
-				url:"http://localhost:2048/column/getAllWithBlog.action",
+				url:getPath() + "/column/getAllWithBlog.action",
 				async:false,
 				crossDomain:true,
 				type:'get',
@@ -36,7 +36,7 @@ var uploadBlog = new Vue({
 			this.blog.columns = this.columnSelected;
 			console.log(this.blog);
 			$.ajax({
-				url:'http://localhost:2048/blog/uploadBlog.action',
+				url:getPath() + '/blog/uploadBlog.action',
 				async:false,
 				crossDomain:true,
 				type:'post',

@@ -1,7 +1,8 @@
 var about = new Vue({
 	el:".about",
 	data:{
-		editionRecord:[]
+		editionRecord:[],
+		accumulation:'23'
 	},
 	methods:{
 		loadUpdate:function(){//获取网页版本更新
@@ -36,10 +37,30 @@ var about = new Vue({
 					}
 				}
 			})
+		},
+		getTime:function(){
+			let curr = new Date();
+			let prev = '2021-01-20 12:00:00';
+			let sub = curr.getTime() - new Date(prev).getTime();
+			
+			let days = Math.floor(sub / (1000 * 60 * 60 * 24));
+			sub %= 1000 * 60 * 60 * 24;
+			let hours = Math.floor(sub / (1000 * 60 * 60));
+			sub %= 1000 * 60 * 60;
+			let mins = Math.floor(sub / (1000 * 60));
+			sub %= 1000 * 60;
+			let secs = Math.floor(sub / (1000));
+			
+			return days + '天' + hours + '时' + mins + '分' + secs + '秒';
 		}
 	},
 	created:function(){
 		this.loadUpdate();
-		
+			
+		let that = this;
+		this.accumulation = this.getTime();
+		setInterval(function(){
+			that.accumulation = that.getTime();
+		},1000);
 	}
 })

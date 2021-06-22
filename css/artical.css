@@ -5,6 +5,7 @@
 	background-color: #f4f4f4;
 	background-image: url(../img/bg6.jpg);
 	background-attachment: fixed;
+	background-size: cover;
 	position: relative;
 	padding-bottom: 3.125rem;
 }
