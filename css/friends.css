@@ -4,7 +4,7 @@
 	background-image: url(../img/bg10.jpg);
 	background-size: cover;
 	background-attachment: fixed;
-	
+	/* z-index: 1; */
 	position: relative;
 	padding-bottom: 2.5rem;
 }
@@ -440,4 +440,63 @@ height: 5rem;
 	from{
 		transform: scale(1.5);
 	}
+}
+
+
+#canvas{
+	position: absolute;
+	height: 100%;
+	width: 100%;
+	/* z-index: 2; */
+	top: 0;
+	left: 0;
+	pointer-events: none;
+	/* background-color: black; */
+}
+
+.rain-controller{
+	position: fixed;
+	left: 10rem;
+	bottom: 8rem;
+	border: .125rem solid #0000C0;
+	border-radius: .5rem;
+	background-color: #2c939c70;
+	width: 8rem;
+	/* height: 4rem; */
+	/* display: flex; */
+	/* justify-content: space-between; */
+}
+
+.rain-button{
+	float: left;
+	/* background-color: red; */
+	background-image: linear-gradient(to right, #00d2ff75, #928dab90);
+	width: 4rem;
+	height: 2rem;
+	line-height: 1.5rem;
+	text-align: center;
+	border-radius: .5rem;
+	font-size: 1rem;
+	color: #175613;
+	font-weight: bold;
+	box-sizing: border-box;
+	border: 0.25rem solid #7f7f7fa0;
+	
+	cursor: pointer;
+	
+	transition: border-color .2s;
+}
+.rain-button:hover{
+	border: .25rem solid #afafafa0;
+}
+
+.rain-controller-panel{
+	height: 2.5rem;
+	width: 100%;
+	line-height: 2.5rem;
+	text-align: center;
+	color: #20e414;
+	font-size: 1.125rem;
+	letter-spacing: 0.125rem;
+	/* font-weight: bold; */
 }

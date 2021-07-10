@@ -32,6 +32,8 @@
 				</div>
 			</div>
 			
+			<canvas id="canvas"></canvas>
+			
 			<!-- 友链墙 -->
 			<div class="friedns-content">
 				<!-- 友链墙导语 -->
@@ -116,6 +118,18 @@
 					<div class="friends-player-mask" @click="bgmControl">
 						<div class="friends-player-mask-control" :class="bgm.maskControlClass"></div>
 					</div>
+				</div>
+			</div>
+			
+			<!-- 雨点控制器 -->
+			<div class="rain-controller" style="display: none;">
+				<div class="rain-controller-panel">
+				</div>
+				<div class="rain-button rain-controller-up">
+					大
+				</div>
+				<div class="rain-button rain-controller-down">
+					小
 				</div>
 			</div>
 		</div>

@@ -6,6 +6,7 @@
 	/* background-color: white; */
 	box-shadow: 0px 0px 0.625rem black;
 	background-color: #e3e3e350;
+	z-index: 10;
 }
 
 /* 导航栏内容 */

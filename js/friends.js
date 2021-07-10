@@ -57,7 +57,7 @@ var friends = new Vue({
 		bgmControl:function(){//控制背景音乐
 			var audio1 = document.getElementById('audio1');
 			var audio2 = document.getElementById('audio2');
-			if(this.bgm.paused){//背景音乐播放
+			if(this.bgm.paused){//背景音乐播放，开始下雨
 				audio1.play();
 				audio2.play();
 				this.bgm = {
@@ -65,7 +65,11 @@ var friends = new Vue({
 					containerClass:'friends-player-container-playing',
 					maskControlClass:'friends-player-mask-control-playing'
 				}
-			}else{				//背景音乐暂停
+				currLevel = 0;
+				$('.rain-controller-up').click();
+				setRefresh();
+				$('.rain-controller').show();
+			}else{				//背景音乐暂停，停止下雨
 				audio1.pause();
 				audio2.pause();
 				this.bgm = {
@@ -73,6 +77,10 @@ var friends = new Vue({
 					containerClass:'friends-player-container-paused',
 					maskControlClass:'friends-player-mask-control-paused'
 				}
+				
+				ctx.clearRect(0,0,canvas.width,canvas.height);
+				clearRefresh();
+				$('.rain-controller').hide();
 			}
 		}
 	},
@@ -103,3 +111,71 @@ $(function(){
 	});
 	
 })
+
+let canvas = document.getElementById('canvas');
+
+let ctx = canvas.getContext('2d');
+
+canvas.height = window.innerHeight;
+canvas.width = window.innerWidth;
+
+class Rain{
+	constructor() {
+	    this.x = Math.random() * window.innerWidth;
+		this.y = Math.random() * window.innerHeight;
+		this.speedX = Math.random() * 3 - 5;
+		this.speedY = Math.random() * 5 + 10;
+	}
+	
+	update(){
+		this.x = (this.x + this.speedX + canvas.width) % canvas.width;
+		this.y = (this.y + this.speedY) % canvas.height;
+	}
+	
+	draw(){
+		ctx.strokeStyle = 'silver';
+		ctx.beginPath();
+		ctx.moveTo(this.x,this.y);
+		ctx.lineTo(this.x + this.speedX,this.y + this.speedY);
+		ctx.stroke();
+	}
+}
+
+let rains = [];
+let currLevel = 1;
+for(let i = 0;i < 3000;i++){
+	rains.push(new Rain());
+}
+
+let canvasRefreshId = null;
+
+function setRefresh(){
+	canvasRefreshId = setInterval(function(){
+		ctx.clearRect(0,0,canvas.width,canvas.height);
+		for(let i = 0;i < 1000 * currLevel;i++){
+			rains[i].update();
+			rains[i].draw();
+		}
+	},20);
+}
+
+function clearRefresh(){
+	clearInterval(canvasRefreshId);
+}
+
+
+$('.rain-controller-up').click(function(){
+	currLevel = currLevel + 1 > 3 ? 3 : currLevel + 1;
+	$('.rain-controller-panel').text('当前降水量:' + currLevel);
+	
+	
+});
+
+$('.rain-controller-down').click(function(){
+	currLevel = currLevel - 1 < 0 ? 0 : currLevel - 1;
+	$('.rain-controller-panel').text('当前降水量:' + currLevel);
+	
+	if(currLevel == 0){
+		friends.bgmControl();
+	}
+});
