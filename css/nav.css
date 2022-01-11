@@ -58,7 +58,7 @@
 
 
 .general-nav-content-links{
-	width:43.75rem;
+	width:50%;
 	margin-left: 12.5rem;
 }
 .general-nav-content-links ul{
@@ -66,7 +66,7 @@
 	justify-content: space-around;
 }
 .general-nav-content-links li{
-	width:7.5rem;
+	/* width:7.5rem; */
 	/* border: 1px solid; */
 	display: flex;
 	cursor: pointer;
@@ -78,6 +78,7 @@
 	color: #434343;
 	margin: auto;
 	justify-self: center;
+	padding: 0rem .5rem;
 }
 
 .general-nav-content-links li:hover{
