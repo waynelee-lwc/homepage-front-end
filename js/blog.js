@@ -127,5 +127,8 @@ var blogPage = new Vue({
 		this.loadColumns();
 		
 		this.loadNotices();
+	},
+	mounted:function(){
+		hideMask()
 	}
 })
