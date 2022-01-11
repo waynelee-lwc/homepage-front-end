@@ -100,6 +100,9 @@ var artical = new Vue({
 		document.title = this.blog.title;
 		
 
+	},
+	mounted:function(){
+		hideMask()
 	}
 });
 

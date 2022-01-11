@@ -88,6 +88,9 @@ var friends = new Vue({
 		
 		this.loadFriendLink();
 		
+	},
+	mounted:function(){
+		hideMask();
 	}
 })
 

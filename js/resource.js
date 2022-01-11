@@ -51,5 +51,8 @@ var rsboard = new Vue({
 		
 		console.log('load links list');
 		this.loadLinkList();
+	},
+	mounted:function(){
+		hideMask();
 	}
 })

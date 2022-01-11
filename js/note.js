@@ -124,5 +124,8 @@ var note = new Vue({
 		this.loadNoteList();
 		// alert("施工中，敬请期待。。。");
 		// location.href = './index.html';
+	},
+	mounted:function(){
+		hideMask();
 	}
 })

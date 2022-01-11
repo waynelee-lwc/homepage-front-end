@@ -10,11 +10,27 @@
 		<!-- <link rel="stylesheet" href="css/style.css" /> -->
 		 <link rel="stylesheet" href="./editormd/css/editormd.css" >
 		<link rel="stylesheet" href="editormd/css/editormd.preview.css" />
+		<link rel="stylesheet" href="css/loading-mask.css">
 		<link rel="shortcut icon" href="./ico/icon.png" type="image/x-icon">
 		<!-- <link rel="stylesheet" href="../css/editormd.preview.css" /> -->
 		<!-- <link rel="shortcut icon" href="https://pandao.github.io/editor.md/favicon.ico" type="image/x-icon" /> -->
 	</head>
 	<body>
+		
+		<!-- 加载页 -->
+		<div class="mask" id="loading-mask">
+			<div class="mask-animate">
+				<p>加</p>
+				<p>载</p>
+				<p>中</p>
+				<p>·</p>
+				<p>·</p>
+				<p>·</p>
+<!-- 				<div class="mask-cube"></div>
+				<div class="mask-cube"></div> -->
+			</div>
+		</div>
+		
 		<div id="artical" class="artical">
 			<!-- 导航栏 -->
 			<div class="general-nav">
@@ -27,10 +43,14 @@
 					</div>
 					<div class="general-nav-content-links">
 						<ul>
-							<li class="general-nav-content-links-selected"><a href="blog.html">博客园</a></li>
+							<li><a href="blog.html">博客园</a></li>
 							<li><a href="./friends.html">友人录</a></li>
-							<li><a href="resource.html">资源墙</a></li>
-							<li><a href="./note.html">留言板</a></li>
+							<li><a href="./resource.html">资源墙</a></li>
+							<li class="general-nav-content-links-selected"><a href="./note.html">留言板</a></li>
+							<li><a href="http://www.wayne-lee.cn:1024/搜索.html" target="_blank">习题册</a></li>
+							<li><a href="http://www.wayne-lee.cn:2119/" target="_blank">单词簿</a></li>
+							<li><a href="http://www.wayne-lee.cn:2233/LED-lattice.html" target="_blank">LED点阵模拟器</a></li>
+							<li><a href="http://www.wayne-lee.cn:3005/" target="_blank">数据结构绘图板</a></li>
 						</ul>
 					</div>
 				</div>
