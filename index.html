@@ -14,13 +14,22 @@
 	<body>
 		
 
+		<div class="mask" id="loading-mask">
+			<div class="mask-animate">
+				<p>加</p>
+				<p>载</p>
+				<p>中</p>
+				<p>·</p>
+				<p>·</p>
+				<p>·</p>
+<!-- 				<div class="mask-cube"></div>
+				<div class="mask-cube"></div> -->
+			</div>
+		</div>
 		
 		<!-- 首页 -->
 		<div class="bg" id="bg">
 			
-			<div class="mask" :hidden="mask">
-				
-			</div>
 			
 			<div class="canvas" style="" v-show="canvas">
 				<!-- <h1>asdfasdfsaf</h1> -->
@@ -121,8 +130,8 @@
 </html>
 <script src="js/vue.js"></script>
 <script src="js/jquery-3.5.1.js"></script>
-<script src="js/index.js"></script>
 <script src="js/commen.js"></script>
+<script src="js/index.js"></script>
 
 <script>
 	$(function(){

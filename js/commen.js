@@ -56,3 +56,7 @@ var getPath = function(){
 		case 'dev':return serverAddress.dev;
 	}
 };
+
+var hideMask = function(){
+	$('#loading-mask').fadeOut(200)
+}

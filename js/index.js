@@ -195,12 +195,15 @@ var bg = new Vue({
 		}
 	},
 	created:function(){
-		console.log(sessionStorage.getItem('user'));
+		// console.log(sessionStorage.getItem('user'));
 		this.user = JSON.parse(sessionStorage.getItem('user'));
 		this.mask = true
 	},
 	beforeCreate:function(){
-		console.log('beforeCreated')
+		// console.log('beforeCreated')
+	},
+	mounted:function(){
+		hideMask();
 	}
 	
 })
