@@ -13,8 +13,15 @@
 	</head>
 	<body>
 		
+
+		
 		<!-- 首页 -->
 		<div class="bg" id="bg">
+			
+			<div class="mask" :hidden="mask">
+				
+			</div>
+			
 			<div class="canvas" style="" v-show="canvas">
 				<!-- <h1>asdfasdfsaf</h1> -->
 				<!-- <div class="cake"></div> -->
@@ -60,7 +67,8 @@
 				<a href="blog.html">
 				<div class="bg-icon"></div>
 				<div class="bg-title">
-					<p>waynelee's blog</p>
+					<!-- <p>waynelee's blog</p> -->
+					<p>卷卷毛的博客</p>
 				</div>
 				</a>
 				<div class="bg-search">
@@ -121,7 +129,7 @@
 		var canvas = $('.canvas');
 		
 		for(var i = 0;i < 30 ;i++){
-			console.log(Math.random());
+			// console.log(Math.random());
 			var style = 'style="';
 			style += 'left:' + Math.floor(Math.random() * 100) + '%;';
 			style += 'animation-delay:' + Math.floor(Math.random() * 5) + 's;'

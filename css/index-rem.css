@@ -467,3 +467,12 @@
 	color: #567d5c;
 }
 
+.mask{
+	position: absolute;
+	top: 0rem;
+	left: 0rem;
+	z-index: 100;
+	background-color: #00000035;
+	height: 100%;
+	width: 100%;
+}

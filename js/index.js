@@ -16,7 +16,8 @@ var bg = new Vue({
 			nickname:'',
 			password:''
 		},
-		canvas:false
+		canvas:false,
+		mask:false
 	},
 	methods:{
 		retrivalBlog:function(){//检索博客
@@ -196,5 +197,10 @@ var bg = new Vue({
 	created:function(){
 		console.log(sessionStorage.getItem('user'));
 		this.user = JSON.parse(sessionStorage.getItem('user'));
+		this.mask = true
+	},
+	beforeCreate:function(){
+		console.log('beforeCreated')
 	}
+	
 })
