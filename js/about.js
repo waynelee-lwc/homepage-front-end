@@ -8,32 +8,32 @@ var about = new Vue({
 		loadUpdate:function(){//获取网页版本更新
 			var that = this
 			$.ajax({
-				url:getPath() + '/editionRecord/getAll.action',
+				url:'http://localhost:3004/editionRecord/',
 				type:'get',
 				crossDomain:true,
 				async:false,
-				data:{
-					top:2
-				},
 				success:function(result){
-					console.log(result);
-					that.editionRecord = result
+					//console.log(result.extend);
+					that.editionRecord = result.extend
 				}
 			})
 		},
 		like:function(idx){//点赞
 			var that = this
 			$.ajax({
-				url:getPath() + '/editionRecord/like.action',
-				type:'get',
+				url:'http://localhost:3004/editionRecord/like',
+				type:'put',
 				crossDomain:true,
 				async:true,
 				data:{
 					id:that.editionRecord[idx].id
 				},
 				success:function(result){
-					if(result == 1){
+					console.log(result)
+					if(result.code == 200){
 						that.editionRecord[idx].likes++;
+					}else{
+						alert('点赞失败!' + result.message)
 					}
 				}
 			})
