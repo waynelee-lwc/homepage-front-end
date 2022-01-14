@@ -8,7 +8,7 @@ var about = new Vue({
 		loadUpdate:function(){//获取网页版本更新
 			var that = this
 			$.ajax({
-				url:'http://localhost:3004/editionRecord/',
+				url:'http://60.205.211.19:3004/editionRecord/',
 				type:'get',
 				crossDomain:true,
 				async:false,
@@ -21,7 +21,7 @@ var about = new Vue({
 		like:function(idx){//点赞
 			var that = this
 			$.ajax({
-				url:'http://localhost:3004/editionRecord/like',
+				url:'http://60.205.211.19:3004/editionRecord/like',
 				type:'put',
 				crossDomain:true,
 				async:true,
