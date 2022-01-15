@@ -97,6 +97,8 @@
 	border-left: 3px solid #648186; */
 	margin-top: 2.125rem;
 	box-shadow: 0px 0.3125rem 1.5625rem #648186;
+	padding-bottom: .5rem;
+	padding-top: .5rem;
 }
 
 .blog-preview::after{
@@ -110,7 +112,7 @@
 	/* border: 1px solid; */
 	overflow-x: auto;
 	margin:auto;
-	transform: translateY(0.3125rem);
+	/* transform: translateY(0.3125rem); */
 	/* overflow-y: auto; */
 	margin-bottom: 0.75rem;
 }

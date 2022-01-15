@@ -7,7 +7,8 @@ var blogPage = new Vue({
 		noticeList:[],		//公告板列表
 		blogRetrieval:{		//文章检索信息
 			title:'',
-			cid:''
+			cid:'',
+			page:1
 		},	
 		columnList:[],		//分栏列表
 		columnSelected:0,	//分栏选择编号
@@ -20,7 +21,7 @@ var blogPage = new Vue({
 			var that = this;
 			$.ajax({
 				async:false,
-				url:'http://localhost:3004/friendLink/',
+				url:'http://60.205.211.19:3004/friendLink/',
 				type:'GET',
 				// dataType:'jsonp',
 				// jsonp:'jsoncallback',
@@ -69,12 +70,13 @@ var blogPage = new Vue({
 			var that = this;
 			$.ajax({
 				async:false,
-				url:getPath() + '/blog/getList.action',
+				url:'http://60.205.211.19:3004/blog/',
 				data:that.blogRetrieval,
 				type:'get',
 				success:function(result){
-					console.log('load blog list successfully');
-					that.blogList = result;
+					// console.log('load blog list successfully');
+					console.log(result)
+					that.blogList = result.extend.list;
 				}
 			})
 		},

@@ -228,7 +228,7 @@
 					<!-- <div class="blog-preview-total">
 						<p>共找到&nbsp;{{blogList.length}}&nbsp;篇</p>
 					</div> -->
-					<div class="blog-preview-container" v-for="(blog,idx) in blogList" :style="{'animation-delay':idx/10+'s'}">
+					<div class="blog-preview-container" v-for="(blog,idx) in blogList" :style="{'animation-delay':idx/50+'s'}">
 						<div class="blog-preview-container-title">
 							<a :href="'./artical.html?bid=' + blog.id"><h2>{{blog.title}}</h2></a>
 						</div>
