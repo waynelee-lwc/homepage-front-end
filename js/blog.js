@@ -16,18 +16,18 @@ var blogPage = new Vue({
 	},
 	methods:{
 		loadFriendLink:function(){//装载友链
-			console.log('blog page is loading friend links');
+			// console.log('blog page is loading friend links');
 			var that = this;
 			$.ajax({
 				async:false,
-				url:getPath() + '/friendlink/getAccept.action',
+				url:'http://localhost:3004/friendLink/',
 				type:'GET',
 				// dataType:'jsonp',
 				// jsonp:'jsoncallback',
 				crossDomain:true,
 				success:function(result){
-					console.log('friend link load successfully');
-					that.friendLink = result;
+					console.log(result);
+					that.friendLink = result.extend;
 				},
 				error:function(e){
 					console.log('失败了');
@@ -37,7 +37,7 @@ var blogPage = new Vue({
 			});
 		},
 		loadBlogCount:function(){//装载文章计数
-			console.log('blog page is loading blog count');
+			// console.log('blog page is loading blog count');
 			var that = this;
 			$.ajax({
 				async:false,
@@ -51,7 +51,7 @@ var blogPage = new Vue({
 			})
 		},
 		loadColumnCount:function(){//装载分栏计数
-			console.log('blog page is loading column count');
+			// console.log('blog page is loading column count');
 			var that = this;
 			$.ajax({
 				async:false,
@@ -65,7 +65,7 @@ var blogPage = new Vue({
 			})
 		},
 		loadBlogs:function(){//获取文章列表
-			console.log('blog page is loading blog list');
+			// console.log('blog page is loading blog list');
 			var that = this;
 			$.ajax({
 				async:false,
@@ -79,7 +79,7 @@ var blogPage = new Vue({
 			})
 		},
 		loadColumns:function(){//装载分栏
-			console.log('blog page is loading column list');
+			// console.log('blog page is loading column list');
 			var that = this;
 			$.ajax({
 				async:false,
@@ -93,7 +93,7 @@ var blogPage = new Vue({
 			});
 		},
 		loadNotices:function(){//加载公告
-			console.log('blog page is loading notice list');
+			// console.log('blog page is loading notice list');
 			var that = this;
 			$.ajax({
 				async:false,
@@ -108,24 +108,30 @@ var blogPage = new Vue({
 		}
 	},
 	created:function(){
-		console.log(sessionStorage);
-		console.log('blog page is loading data...');
+		// console.log(sessionStorage);
+		// console.log('blog page is loading data...');
 		
 		this.blogRetrieval.cid = sessionStorage.getItem('cid');
 		this.blogRetrieval.title = sessionStorage.getItem('title')
 		sessionStorage.removeItem('title');
 		sessionStorage.removeItem('cid');
 		
+		//友链
 		this.loadFriendLink();
 		
+		//博客计数
 		this.loadBlogCount();
 		
+		//分栏计数
 		this.loadColumnCount();
 		
+		//博客列表
 		this.loadBlogs();
 		
+		//分栏列表
 		this.loadColumns();
 		
+		//公告
 		this.loadNotices();
 	},
 	mounted:function(){
