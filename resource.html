@@ -7,7 +7,115 @@
 		<link rel="stylesheet" href="css/nav.css" />
 		<link rel="stylesheet" href="css/resource.css">
 		<link rel="shortcut icon" href="./ico/icon.png" type="image/x-icon">
-		<link rel="stylesheet" href="css/loading-mask.css">
+		<style>
+			
+			.mask{
+				position: fixed;
+				top: 0rem;
+				left: 0rem;
+				z-index: 100;
+				background-color: #f6f7de;
+				height: 100%;
+				width: 100%;
+			}
+			
+			.mask-animate{
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				transform: translate(-50%,-50%);
+				height: 6rem;
+				width: 30rem;
+				/* border: 1px solid; */
+				/* border-left: 0.5rem solid #a5a551; */
+				/* border-right: 0.5rem solid #a5a551; */
+				box-sizing: border-box;
+				/* background-color: #f2f7cc; */
+			}
+			
+			.mask-animate>p{
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				/* transform: translate(-50%,-50%); */
+				padding: 0rem;
+				margin: 0rem;
+				font-size: 2rem;
+				height: auto;
+				color: #f6f7de;
+				
+				animation-name: loadingText;
+				animation-duration: 1.5s;
+				animation-iteration-count: infinite;
+				animation-timing-function: linear;
+			}
+			
+			.mask-animate>p:nth-child(1){
+				animation-delay: 0.55s;
+			}
+			.mask-animate>p:nth-child(2){
+				animation-delay: 0.4s;
+			}
+			.mask-animate>p:nth-child(3){
+				animation-delay: 0.25s;
+			}
+			.mask-animate>p:nth-child(4){
+				animation-delay: 0.10s;
+			}
+			.mask-animate>p:nth-child(5){
+				animation-delay: 0.05s;
+			}
+			.mask-animate>p:nth-child(6){
+				animation-delay: 0s;
+			}
+			
+			@keyframes loadingText{
+				0%{
+					left: 5%;
+					/* top: 100%; */
+					transform: rotate(0deg) translateY(-50%);
+				}
+				10%{
+					/* top: 50%; */
+					left: 20%;
+					transform: rotate(0deg) translateY(-50%);
+					color: #000000;
+				}
+			
+				40%{
+					top: 50%;
+				}
+				50%{
+					top: 40%;
+				}
+				60%{
+					top: 50%;
+				}
+			
+				90%{
+					/* top: 50%; */
+					left: 80%;
+					transform: rotate(0deg) translateY(-50%);
+					color: #000000;
+				}
+				100%{
+					left: 90%;
+					/* top: 100%; */
+					transform: rotate(0deg) translateY(-50%);
+				}
+			}
+			
+			
+			/* .mask-cube{
+				position: absolute;
+				top: 5%;
+				left: 5%;
+				height: 1.5rem;
+				width: 1.5rem;
+				background-color: black;
+				border-radius: .25rem;
+			} */
+		</style>
 	</head>
 	<body>
 		
