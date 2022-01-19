@@ -176,22 +176,30 @@
 					<p class="rsboard-display-collection-title">
 						{{col.name}}
 					</p>
-					<a 
-					class="rsboard-display-collection-link" 
-					v-for="(link,idx) in col.links"
-					:href="link.address"
-					target="_blank">
-						<!-- {{link}} -->
-						<div class="rsboard-display-collection-link-icon">
-							<img :src="link.icon == null ? link.address + '/favicon.ico' : link.icon " alt=""/>
-						</div>
-						<div class="rsboard-display-collection-link-title">
-							<h3>{{link.name}}</h3>
-						</div>
-						<div class="rsboard-display-collection-link-intro">
-							<p>{{link.intro}}</p>
-						</div>
-					</a>
+					<div class="rsboard-display-collection-wrapper">
+						<a
+						class="rsboard-display-collection-link" 
+						v-for="(link,idx) in col.links"
+						:href="link.address"
+						target="_blank" 
+						:title="link.intro">
+							<!-- {{link}} -->
+							<div class="rsboard-display-collection-link-icon">
+								<img :src="link.icon == null ? link.address + '/favicon.ico' : link.icon " alt=""/>
+							</div>
+							<div class="rsboard-display-collection-link-title">
+								<h3>{{link.name}}</h3>
+							</div>
+							<!-- <div class="rsboard-display-collection-link-intro">
+								<p>{{link.intro}}</p>
+							</div> -->
+						</a>
+						
+						<a
+						class="rsboard-display-collection-link-fake" 
+						v-for="(link,idx) in (col.links.length % 7 == 0 ? 0 : 7 - col.links.length % 7)">
+						</a>
+					</div>
 				</div>
 			</div>
 			
