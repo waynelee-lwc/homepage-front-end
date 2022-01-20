@@ -140,3 +140,7 @@ var blogPage = new Vue({
 		hideMask()
 	}
 })
+
+window.onscroll = ()=>{
+	console.log(window.scrollY + '/' + window.innerHeight + '/' + document.height)
+}
