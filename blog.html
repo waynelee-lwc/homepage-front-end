@@ -222,12 +222,12 @@
 			</div>
 			<!-- 博客预览 -->
 			<div class="blog-preview">
-				
+				<div class="blog-preview-total">
+					<p>共找到&nbsp;{{totalNumber}}&nbsp;篇</p>
+				</div>
 				<div class="blog-preview-content">
 					
-					<!-- <div class="blog-preview-total">
-						<p>共找到&nbsp;{{blogList.length}}&nbsp;篇</p>
-					</div> -->
+					
 					<div class="blog-preview-container" v-for="(blog,idx) in blogList" :style="{'animation-delay':idx/50+'s'}">
 						<div class="blog-preview-container-title">
 							<a :href="'./artical.html?bid=' + blog.id"><h2>{{blog.title}}</h2></a>
@@ -247,6 +247,10 @@
 							</ul>
 						</div>
 					</div>
+				</div>
+				<div class="blog-preview-loadmore" @click="blogRetrieval.page++;loadMoreBlogs()">
+					第{{blogRetrieval.page}}页，共{{totalPage}}页
+					
 				</div>
 				
 			</div>
@@ -268,7 +272,7 @@
 			<div class="blog-collection">
 				<h2>分栏</h2>
 				<ul>
-					<li v-for="(col,idx) in columnList" @click="blogRetrieval.cid = blogRetrieval.cid == col.id ? '' : col.id;loadBlogs()" :class="{'blog-collection-selected':(blogRetrieval.cid == col.id)}">
+					<li v-for="(col,idx) in columnList" @click="blogRetrieval.cid = blogRetrieval.cid == col.id ? '' : col.id;blogRetrieval.page = 1;loadBlogs()" :class="{'blog-collection-selected':(blogRetrieval.cid == col.id)}">
 						<a>
 						<img :src="col.icon"/>
 						<span>{{col.name}}</span>

@@ -13,7 +13,8 @@ var blogPage = new Vue({
 		columnList:[],		//分栏列表
 		columnSelected:0,	//分栏选择编号
 		blogList:[],		//文章列表
-		
+		totalPage:0,		//分页总数
+		totalNumber:0		//博客条数
 	},
 	methods:{
 		loadFriendLink:function(){//装载友链
@@ -76,7 +77,33 @@ var blogPage = new Vue({
 				success:function(result){
 					// console.log('load blog list successfully');
 					console.log(result)
+					that.totalNumber = result.extend.total
 					that.blogList = result.extend.list;
+					that.totalPage = result.extend.pages
+				}
+			})
+		},
+		loadMoreBlogs:function(){
+			
+			if(this.blogRetrieval.page > this.totalPage){
+				this.blogRetrieval.page = this.totalPage
+				return
+			}
+			
+			var that = this;
+			$.ajax({
+				async:false,
+				url:'http://60.205.211.19:3004/blog/',
+				data:that.blogRetrieval,
+				type:'get',
+				success:function(result){
+					// console.log('load blog list successfully');
+					console.log(result)
+					that.totalNumber = result.extend.total
+					for(let i of result.extend.list){
+						that.blogList.push(i)
+					}
+					that.totalPage = result.extend.pages
 				}
 			})
 		},
@@ -142,5 +169,5 @@ var blogPage = new Vue({
 })
 
 window.onscroll = ()=>{
-	console.log(window.scrollY + '/' + window.innerHeight + '/' + document.height)
+	// console.log(window.scrollY + '/' + window.innerHeight + '/' + document.height)
 }

@@ -98,11 +98,7 @@
 }
 
 .controls-selections>select:first-child{
-	width: 70%;
-}
-
-.controls-selections>select:last-child{
-	width: 25%;
+	width: 100%;
 }
 
 .controls-submit{
