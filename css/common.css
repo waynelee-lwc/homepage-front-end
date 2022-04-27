@@ -63,7 +63,7 @@ input,button,textarea:focus{
 .footer>.container>a>p::before{
     display: inline-block;
     content: "";
-    background-image: url(../img/webLog.png);
+    /* background-image: url(../img/webLog.png); */
     height: 1.5rem;
     width: 1.5rem;
     background-size: cover;
