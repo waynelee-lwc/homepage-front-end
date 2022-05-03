@@ -2,7 +2,7 @@
 <html>
 	<head>
 		<meta charset="utf-8" />
-		<title>欢迎来到卷卷毛的个人空间</title>
+		<title>卷卷毛 Blog&Lab</title>
 		
 		<link rel="stylesheet" href="css/index-rem.css"/>
 		<link rel="stylesheet"	href="css/common.css" />
@@ -55,6 +55,7 @@
 						<li><a href="http://www.wayne-lee.cn:2119/" target="_blank">单词簿</a></li>
 						<li><a href="http://www.wayne-lee.cn:2233/LED-lattice.html" target="_blank">LED点阵模拟器</a></li>
 						<li><a href="http://www.wayne-lee.cn:3005/" target="_blank">数据结构绘图板</a></li>
+						<li><a href="http://www.wayne-lee.cn:3008/" target="_blank">SNL编译器</a></li>
 					
 					</ul>
 				</div>
@@ -65,7 +66,7 @@
 						<li @click="userSelected.register? hideRegister():showRegister()" :class="{'bg-user-selected':userSelected.register}">注册</li>
 					</ul>
 					<ul v-else>
-						<li @click="logout()">欢迎回家，{{user.nickname}}</li>
+						<li @click="logout()">欢迎回来，{{user.nickname}}</li>
 					</ul>
 				</div>
 				
@@ -78,7 +79,7 @@
 				<div class="bg-icon"></div>
 				<div class="bg-title">
 					<!-- <p>waynelee's blog</p> -->
-					<p>卷卷毛的博客</p>
+					<p>卷卷毛's Blog&Lab</p>
 				</div>
 				</a>
 				<div class="bg-search">
