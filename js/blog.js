@@ -22,7 +22,7 @@ var blogPage = new Vue({
 			var that = this;
 			$.ajax({
 				async:false,
-				url:'http://60.205.211.19:3004/friendLink/',
+				url:'http://43.138.86.233:3004/friendLink/',
 				type:'GET',
 				// dataType:'jsonp',
 				// jsonp:'jsoncallback',
@@ -71,7 +71,7 @@ var blogPage = new Vue({
 			var that = this;
 			$.ajax({
 				async:false,
-				url:'http://60.205.211.19:3004/blog/',
+				url:'http://43.138.86.233:3004/blog/',
 				data:that.blogRetrieval,
 				type:'get',
 				success:function(result){
@@ -93,7 +93,7 @@ var blogPage = new Vue({
 			var that = this;
 			$.ajax({
 				async:false,
-				url:'http://60.205.211.19:3004/blog/',
+				url:'http://43.138.86.233:3004/blog/',
 				data:that.blogRetrieval,
 				type:'get',
 				success:function(result){

@@ -45,7 +45,7 @@ console.log(sessionStorage.getItem('user'));
 
 var serverAddress = {
 	dev:'http://127.0.0.1:2048',
-	online:'http://60.205.211.19:2048'
+	online:'http://43.138.86.233:2048'
 }
 
 var currentEnvironment = 'online';
