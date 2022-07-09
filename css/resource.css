@@ -137,7 +137,7 @@
 .rsboard-display-collection-link{
     height: 10.5rem;
     /* border: 1px solid; */
-    width: 12.5%;
+    width: 124%;
 /*    margin-top: 0.75rem;
     margin-left: 2.25rem; */
 	margin-top: .5rem;
@@ -156,7 +156,7 @@
 
 .rsboard-display-collection-link-fake{
 	height: 10.5rem;
-	width: 12.5%;
+	width: 14%;
 
 	margin-top: .5rem;
 }
