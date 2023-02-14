@@ -3,6 +3,10 @@ html,body{
     padding:0rem;
 }
 
+a {
+    text-decoration: none;
+    color: #0198E1;
+}
   
 body {
     padding: 30px 20px 20px 20px;
@@ -105,3 +109,74 @@ body {
     text-align: right;
 }
 
+.wrp-edu{
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+
+.title{
+    margin: 0rem;
+    padding-left: 2rem;
+}
+
+.duration{
+    font-size: 1.25rem;
+    background: black;
+    color: white;
+    width: auto;
+    height: 1.75rem;
+    padding: 0rem 0.5rem;
+    line-height: 1.75rem;
+}
+
+.title-edu{
+}
+
+.edu{
+    width: calc(100% - 4rem);
+    margin: auto;
+    margin-top: 0.5rem;
+    position: relative;
+    box-sizing: border-box;
+    border-left: 0.25rem solid;
+    padding-left: 1rem;
+}
+
+.edu-jlu{
+    height: 5rem;
+}
+
+.edu-jlu .sch-name{
+    position: absolute;
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+    font-weight: bold;
+}
+
+.edu-jlu .duration-jlu{
+    position: absolute;
+    right: 0rem;
+}
+
+.edu-jlu .major{
+    position: absolute;
+    top: 2rem;
+    font-weight: bold;
+}
+
+.edu-jlu .gpa{
+    position: absolute;
+    bottom: 0rem;
+}
+
+.edu-jlu .badge{
+    height: auto;
+    width: 9rem;
+    position: absolute;
+    right: 0rem;
+    bottom: 0rem;
+}
+
+.edu-jlu .badge img{
+    width: 100%;
+}
