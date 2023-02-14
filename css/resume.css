@@ -180,3 +180,22 @@ body {
 .edu-jlu .badge img{
     width: 100%;
 }
+
+.wrp-honor{
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+
+.honor-list{
+    width: calc(100% - 4rem);
+    margin: auto;
+    margin-top: 0.5rem;
+    position: relative;
+    box-sizing: border-box;
+    border-left: 0.25rem solid;
+    padding-left: 1rem;
+}
+
+.honor-item{
+    margin-bottom: 0.25rem;
+}
