@@ -199,3 +199,46 @@ body {
 .honor-item{
     margin-bottom: 0.25rem;
 }
+
+.devider{
+    margin: 0.5rem 0rem;
+    border: 1px dashed lightgray;
+}
+
+.project-list{
+    width: calc(100% - 4rem);
+    margin: auto;
+    margin-top: 0.5rem;
+    position: relative;
+}
+
+.project-item{
+    position: relative;
+    padding-left: 1rem;
+    box-sizing: border-box;
+    border-left: 0.25rem solid;
+}
+
+.project-item .proj-name{
+    font-weight: bold;
+    font-size: 1.125rem;
+}
+
+.project-item .proj-duration{
+    position: absolute;
+    right: 0rem;
+    top: 0rem;
+}
+
+.project-item .proj-role{
+    font-weight: bold;
+}
+
+.project-item .proj-desc{
+
+}
+
+.project-item .proj-desc li{
+
+}
+
