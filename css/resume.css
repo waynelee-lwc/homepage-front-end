@@ -200,7 +200,7 @@ body {
     margin-bottom: 0.25rem;
 }
 
-.devider{
+.divider{
     margin: 0.5rem 0rem;
     border: 1px dashed lightgray;
 }
@@ -242,3 +242,39 @@ body {
 
 }
 
+.exp-list{
+    width: calc(100% - 4rem);
+    margin: auto;
+    margin-top: 0.5rem;
+    position: relative;
+}
+
+.exp-item{
+    position: relative;
+    padding-left: 1rem;
+    box-sizing: border-box;
+    border-left: 0.25rem solid;
+}
+
+.exp-item .exp-comp{
+    font-weight: bold;
+    font-size: 1.125rem;
+}
+
+.exp-item .exp-duration{
+    position: absolute;
+    right: 0rem;
+    top: 0rem;
+}
+
+.exp-item .exp-role{
+    font-weight: bold;
+}
+
+.exp-item .exp-desc{
+
+}
+
+.exp-item .exp-desc li{
+
+}
