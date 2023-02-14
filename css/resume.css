@@ -38,15 +38,15 @@ body {
 .wrp{
     width: 100%;
     position: relative;
-    /* background-color: aquamarine; */
-    /* padding-left: 2rem;
-    padding-right: 2rem;
-    padding-top: 1.5rem;
-    padding-bottom: 1.5rem; */
+    /* background-color: aquamarine; 
+    padding-left: 2rem;
+    padding-right: 2rem; */
+    padding-top: 1rem;
+    padding-bottom: 1rem;
 }
 
 .wrp-intro{
-    height: 10rem;
+    height: 8rem;
 }
 
 .photo{
