@@ -11,12 +11,14 @@ a {
 body {
     padding: 30px 20px 20px 20px;
     font-family: "Montserrat", sans-serif;
-    background-image: -webkit-gradient(linear, left top, right bottom, color-stop(0, #222), color-stop(0.61, #EDEDED));
+    /* background-image: -webkit-gradient(linear, left top, right bottom, color-stop(0, #222), color-stop(0.61, #EDEDED));
     background-image: -o-linear-gradient(right bottom, #222 0%, #444 61%);
     background-image: -moz-linear-gradient(right bottom, #222 0%, #444 61%);
     background-image: -webkit-linear-gradient(right bottom, #222 0%, #444 61%);
     background-image: -ms-linear-gradient(right bottom, #222 0%, #444 61%);
     background-image: linear-gradient(to right bottom, #222222 0%, #444444 61%);
+    background-attachment: fixed; */
+    background-color: #CAE5E7;
 }
 
 .main{
@@ -25,7 +27,7 @@ body {
     width: 100%;
     max-width: 1080px;
     min-height: 100%;
-    border: 1px solid white;
+    /* border: 1px solid white; */
 }
 
 .block{
@@ -33,6 +35,7 @@ body {
     min-height: 4rem;
     background-color: white;
     margin-bottom: .5rem;
+    box-shadow: -0.25rem 0.25rem 0rem #95b2b5;
 }
 
 .wrp{
@@ -42,7 +45,7 @@ body {
     padding-left: 2rem;
     padding-right: 2rem; */
     padding-top: 1rem;
-    padding-bottom: 1rem;
+    padding-bottom: 2rem;
 }
 
 .wrp-intro{
@@ -116,12 +119,16 @@ body {
 
 .title{
     margin: 0rem;
-    padding-left: 2rem;
+    /* padding-left: 2rem; */
+    color: #66b6bd;
+    width: calc(100% - 4rem);
+    margin: auto;
+    border-bottom: 1px solid #66b6bd;
 }
 
 .duration{
     font-size: 1.25rem;
-    background: black;
+    background: #66b6bd;
     color: white;
     width: auto;
     height: 1.75rem;
@@ -138,8 +145,12 @@ body {
     margin-top: 0.5rem;
     position: relative;
     box-sizing: border-box;
-    border-left: 0.25rem solid;
     padding-left: 1rem;
+}
+
+.edu:hover{
+    transition: all 0.1s;
+    border-left: 0.25rem solid #66b6bd;
 }
 
 .edu-jlu{
@@ -192,11 +203,10 @@ body {
     margin-top: 0.5rem;
     position: relative;
     box-sizing: border-box;
-    border-left: 0.25rem solid;
-    padding-left: 1rem;
 }
 
 .honor-item{
+    padding-left: 1rem;
     margin-bottom: 0.25rem;
 }
 
@@ -211,8 +221,13 @@ body {
     background-size: 100%;
 }
 
+.honor-item:hover{
+    transition: all 0.1s;
+    border-left: 0.25rem solid #66b6bd;
+}
+
 .honor-icon-icpc{
-    background-image: url(../img/icpc.ico);
+    background-image: url(../img/icpc.png);
 }
 
 .honor-icon-google{
@@ -221,6 +236,10 @@ body {
 
 .honor-icon-sf{
     background-image: url(../img/segmentfault.ico);
+}
+
+.honor-icon-ccpc{
+    background-image: url(../img/ccpc.jpg);
 }
 
 .honor-icon-challenge{
@@ -255,7 +274,11 @@ body {
     position: relative;
     padding-left: 1rem;
     box-sizing: border-box;
-    border-left: 0.25rem solid;
+}
+
+.project-item:hover{
+    transition: all 0.1s;
+    border-left: 0.25rem solid #66b6bd;
 }
 
 .project-item .proj-name{
@@ -292,7 +315,11 @@ body {
     position: relative;
     padding-left: 1rem;
     box-sizing: border-box;
-    border-left: 0.25rem solid;
+}
+
+.exp-item:hover{
+    transition: all 0.1s;
+    border-left: 0.25rem solid #66b6bd;
 }
 
 .exp-item .exp-comp{
@@ -300,6 +327,9 @@ body {
     font-size: 1.125rem;
     height: 2rem;
     line-height: 2rem;
+    width: 20rem;
+    display: flex;
+    justify-content: space-between;
 }
 
 .exp-comp img{
