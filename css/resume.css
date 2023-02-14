@@ -200,6 +200,45 @@ body {
     margin-bottom: 0.25rem;
 }
 
+.honor-icon{
+    display: inline-block;
+    margin-right: 0.125rem;
+    /* border: 1px solid; */
+    height: 1.5rem;
+    width: 1.5rem;
+    vertical-align: middle;
+
+    background-size: 100%;
+}
+
+.honor-icon-icpc{
+    background-image: url(../img/icpc.ico);
+}
+
+.honor-icon-google{
+    background-image: url(../img/google.ico);
+}
+
+.honor-icon-sf{
+    background-image: url(../img/segmentfault.ico);
+}
+
+.honor-icon-challenge{
+    background-image: url(../img/challenge.png);
+}
+
+.honor-icon-lanqiao{
+    background-image: url(../img/lanqiao.png);
+}
+
+.honor-icon-design{
+    background-image: url(../img/computing\ design.ico);
+}
+
+.honor-icon-gplt{
+    background-image: url(../img/gplt.png);
+}
+
 .divider{
     margin: 0.5rem 0rem;
     border: 1px dashed lightgray;
