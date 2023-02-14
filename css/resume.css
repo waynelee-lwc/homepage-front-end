@@ -298,6 +298,14 @@ body {
 .exp-item .exp-comp{
     font-weight: bold;
     font-size: 1.125rem;
+    height: 2rem;
+    line-height: 2rem;
+}
+
+.exp-comp img{
+    height: 100%;
+    vertical-align: middle;
+    margin-right: 0.25rem;
 }
 
 .exp-item .exp-duration{
