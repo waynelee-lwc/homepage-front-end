@@ -561,8 +561,8 @@ body {
 .learning-content{
     position: absolute;
     /* border: 1px solid; */
-    min-height: 2rem;
-    min-width: 100%;
+    /* min-height: 2rem; */
+    width: 100%;
     display: none;
     opacity: 0;
     top: calc(100% + 0rem);
