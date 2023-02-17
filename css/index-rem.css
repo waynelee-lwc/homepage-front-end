@@ -185,7 +185,29 @@
 	animation-duration: 2s;
 }
 
-.bg-about p{
+.bg-resume{
+	height: 3.75rem;
+	/* margin: auto; */
+	/* box-shadow: 0px 0px 0.8125rem #d0caca; */
+	background-color: rgb(72 99 121 / 50%);
+	border-bottom-right-radius: 0.3125rem;
+	/* border-bottom-right-radius: 0.3125rem; */
+	
+	position: absolute;
+	right: 0rem;
+	top: 0rem;
+	padding-left:0.9375rem ;
+	padding-right: 0.9375rem;
+	max-width: 15rem;
+	min-width: 9rem;
+	box-shadow: 0px 0px 0.8125rem #293540;
+	
+	animation-name: apperence,nav;
+	animation-duration: 2s;
+}
+
+.bg-about p,
+.bg-resume p{
 	display: block;
 	text-align: center;
 	padding-left: 1.25rem;
@@ -203,7 +225,8 @@
 	align-items: center;
 }
 
-.bg-about p:hover{
+.bg-about p:hover,
+.bg-resume p:hover{
 	box-shadow: 0px 0px 0.5rem;
 	color: #cacdca;
 }
