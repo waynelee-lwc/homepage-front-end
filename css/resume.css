@@ -180,6 +180,14 @@ body {
     bottom: 0rem;
 }
 
+.edu-jlu .honor{
+    position: absolute;
+    bottom: 0rem;
+    left: 8rem;
+    /* font-weight: bold; */
+    font-style: italic;
+}
+
 .edu-jlu .badge{
     height: auto;
     width: 9rem;
