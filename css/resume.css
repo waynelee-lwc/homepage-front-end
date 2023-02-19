@@ -635,3 +635,35 @@ body {
     width: 70%;
     font-size: 0.75rem;
 }
+
+.wrp-download{
+    height: 4rem;
+    padding: 0rem;
+    width: 100%;
+}
+
+.download-btn-list{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.download-btn{
+    height: 3rem;
+    width: 90%;
+    font-size: 1.125rem;
+    background-color: #eff9fa;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.1s;
+}
+
+.download-btn:hover{
+    background-color: #66b6bd;
+}
+
+.download-btn:hover a{
+    color: white;
+}
