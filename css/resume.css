@@ -660,6 +660,11 @@ body {
     transition: all 0.1s;
 }
 
+.download-btn a{
+    display: block;
+    width: 100%;
+}
+
 .download-btn:hover{
     background-color: #66b6bd;
 }
