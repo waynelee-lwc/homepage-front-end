@@ -22,7 +22,7 @@ body {
 }
 
 .main{
-    height: 10rem;
+    /* height: 10rem; */
     margin: auto;
     width: 100%;
     max-width: 1080px;
