@@ -42,6 +42,18 @@ body {
     font-weight: bold;  
 }
 
+.homepage{
+    height: 4rem;
+    line-height: 4rem;
+    width: 10rem;
+    background-color: white;
+    position: fixed;
+    left: 0rem;
+    top: 30px;
+    text-align: center; 
+    font-weight: bold;  
+}
+
 .block{
     width: 100%;
     min-height: 4rem;
