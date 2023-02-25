@@ -109,7 +109,7 @@ body {
     /* background-color: yellow; */
     height: 4rem;
     width: 15rem;
-    bottom: 1rem;
+    bottom: 2.5rem;
     left: 12rem;
 }
 
@@ -134,6 +134,47 @@ body {
 .contacts p{
     margin: 0rem;
     text-align: right;
+}
+
+.links{
+    display: flex;
+    position: absolute;
+    left: 12rem;
+    bottom: 2rem;
+    width: 6rem;
+    justify-content: space-between;
+}
+
+.link{
+    height: 1.5rem;
+    width: 1.5rem;
+    cursor: pointer;
+    position: relative;
+}
+
+.link > img{
+    height: 1.5rem;
+    width: auto;
+}
+
+.link .link-content{
+    display: none;
+    width: 15rem;
+    height: auto;
+    position: absolute;
+    left: 50%;
+    z-index: 10;
+    transform: translateX(-50%);
+    background-color: white;
+}
+
+.link-content img{
+    width: 100%;
+    height: auto;
+}
+
+.link:hover .link-content{
+    display: block;
 }
 
 .wrp-edu{
